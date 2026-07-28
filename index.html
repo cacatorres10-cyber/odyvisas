@@ -3,348 +3,442 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>ODY VISAS — Asesoría Migratoria y Consular | Santo Domingo, Punta Cana, Hato Mayor</title>
+<title>ODY VISAS · Asesoría Migratoria y Consular | Santo Domingo, Punta Cana, Hato Mayor</title>
 <meta name="description" content="ODY VISAS te acompaña en todo el proceso migratorio hacia Estados Unidos, Canadá y Europa. Oficinas en Santo Domingo, Punta Cana y Hato Mayor. Tel. 809-488-2222">
 <link rel="icon" href="assets/logo.png" type="image/png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg:#fdf8f3;
-    --bg2:#f3f1ec;
-    --accent:#f0a500;
-    --red:#c8102e;
+    --white:#ffffff;
+    --bg:#fbfaf8;
     --ink:#14264d;
-    --ease:cubic-bezier(0.16,1,0.3,1);
+    --ink-soft:rgba(20,38,77,.62);
+    --gold:#f0a500;
+    --gold-deep:#b57d00;
+    --gold-soft:rgba(240,165,0,.12);
+    --red:#c8102e;
+    --line:rgba(20,38,77,.10);
+    --glass:rgba(255,255,255,.72);
+    --ease:cubic-bezier(.4,0,.2,1);
+    --ease-out:cubic-bezier(.16,1,.3,1);
   }
   *{margin:0;padding:0;box-sizing:border-box}
   html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;overflow-x:hidden;overflow-x:clip;max-width:100%}
-  body{font-family:'League Spartan',sans-serif;background:var(--bg);color:var(--ink);line-height:1.5;-webkit-font-smoothing:antialiased;overflow-x:hidden;overflow-x:clip;max-width:100%;position:relative}
-  section,footer,header.hero{overflow-x:clip}
+  body{font-family:'Inter',sans-serif;background:var(--white);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;overflow-x:clip;max-width:100%}
+  section{overflow-x:clip}
   img,svg,iframe,video{max-width:100%}
   img{display:block}
   a{text-decoration:none;color:inherit}
   ul{list-style:none}
-  .container{width:min(1240px,92%);margin:0 auto}
-  section{padding:110px 0}
+  .container{width:min(1280px,92%);margin:0 auto}
+  .sec{padding:130px 0;position:relative}
 
-  /* type utilities */
-  .label{font-size:10px;font-weight:900;letter-spacing:.4em;text-transform:uppercase}
-  .label-accent{color:var(--red)}
-  .label-gold{color:var(--accent)}
-  .h-huge{font-weight:900;letter-spacing:-.04em;line-height:.85;text-transform:uppercase}
-  .h-big{font-weight:800;letter-spacing:-.03em;line-height:.9;text-transform:uppercase;font-size:clamp(2.4rem,6vw,4.5rem)}
+  /* ---------- type ---------- */
+  .serif{font-family:'Playfair Display',serif}
+  .label{font-family:'Inter',sans-serif;font-size:10px;font-weight:700;letter-spacing:.4em;text-transform:uppercase;color:var(--gold-deep)}
+  .label-red{color:var(--red)}
+  h1,h2,h3{font-family:'Playfair Display',serif;font-weight:600;line-height:1.05;letter-spacing:-.015em}
+  .h-display{font-size:clamp(2.4rem,5.6vw,4.6rem)}
+  .h-display em,.h-lead em{font-style:italic;color:var(--gold-deep)}
+  .lead{font-size:clamp(1rem,1.25vw,1.15rem);color:var(--ink-soft);font-weight:400;max-width:60ch}
+  .sec-head{margin-bottom:70px;max-width:760px}
+  .sec-head h2{margin:20px 0 22px}
 
-  /* reveal-up */
-  .reveal{opacity:0;transform:translateY(40px);transition:all 1s var(--ease)}
-  .reveal.active{opacity:1;transform:translateY(0)}
+  /* dot grid backdrop */
+  .dots{background-image:radial-gradient(rgba(20,38,77,.09) 1px,transparent 1px);background-size:32px 32px}
 
-  /* buttons */
-  .btn-pill{display:inline-flex;align-items:center;gap:10px;background:var(--red);color:#fff;padding:12px 32px;border-radius:999px;font-weight:800;font-size:12px;letter-spacing:.15em;text-transform:uppercase;transition:all .5s var(--ease);border:1px solid transparent;cursor:pointer;font-family:inherit}
-  .btn-pill:hover{background:var(--accent);color:var(--ink);transform:translateY(-2px)}
-  .btn-ghost{display:inline-flex;align-items:center;gap:10px;background:transparent;color:var(--ink);padding:12px 32px;border-radius:999px;font-weight:800;font-size:12px;letter-spacing:.15em;text-transform:uppercase;border:1px solid rgba(20,38,77,.25);transition:all .5s var(--ease)}
-  .btn-ghost:hover{border-color:var(--ink);background:var(--ink);color:var(--bg)}
-  .arrow-cta{display:inline-flex;align-items:center;gap:12px;font-weight:800;font-size:13px;letter-spacing:.2em;text-transform:uppercase;padding-bottom:8px;border-bottom:2px solid var(--accent);transition:gap .5s var(--ease)}
-  .arrow-cta:hover{gap:20px}
-  .btn-wa{display:inline-flex;align-items:center;gap:10px;background:#25d366;color:#fff;padding:12px 32px;border-radius:999px;font-weight:800;font-size:12px;letter-spacing:.15em;text-transform:uppercase;transition:all .5s var(--ease);box-shadow:0 12px 30px rgba(37,211,102,.35)}
+  /* ---------- buttons ---------- */
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:999px;font-family:'Inter',sans-serif;font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;padding:15px 34px;transition:all .5s var(--ease);border:1px solid transparent;cursor:pointer;white-space:nowrap}
+  .btn-gold{background:var(--gold);color:var(--ink);box-shadow:0 10px 32px rgba(240,165,0,.32)}
+  .btn-gold:hover{background:var(--ink);color:#fff;box-shadow:0 14px 40px rgba(20,38,77,.28);transform:translateY(-2px)}
+  .btn-ink{background:var(--ink);color:#fff}
+  .btn-ink:hover{background:var(--gold);color:var(--ink);transform:translateY(-2px)}
+  .btn-line{border-color:rgba(255,255,255,.45);color:#fff;background:rgba(255,255,255,.06)}
+  .btn-line:hover{background:#fff;color:var(--ink);border-color:#fff}
+  .btn-outline{border-color:var(--line);color:var(--ink);background:#fff}
+  .btn-outline:hover{border-color:var(--ink);background:var(--ink);color:#fff}
+  .btn-wa{background:#25d366;color:#fff;box-shadow:0 10px 30px rgba(37,211,102,.3)}
   .btn-wa:hover{background:#1eb855;transform:translateY(-2px)}
-  .btn-wa svg{width:17px;height:17px;fill:#fff}
+  .btn-wa svg{width:16px;height:16px;fill:#fff}
+  .link-arrow{display:inline-flex;align-items:center;gap:12px;font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;padding-bottom:8px;border-bottom:1px solid var(--gold);transition:gap .5s var(--ease-out)}
+  .link-arrow:hover{gap:20px}
 
-  /* ============ NAV ============ */
-  nav.top{position:fixed;top:0;left:0;right:0;z-index:200;height:80px;background:rgba(253,248,243,.97);border-bottom:1px solid rgba(20,38,77,.05)}
-  .nav-inner{height:80px;display:flex;align-items:center;justify-content:space-between;gap:20px}
-  .nav-brand{display:flex;align-items:center;gap:12px;font-weight:900;letter-spacing:.05em;text-transform:uppercase;font-size:1.05rem}
-  .nav-brand img{height:62px;width:62px;object-fit:contain}
-  .nav-brand .dot{color:var(--red)}
-  .nav-menu{display:flex;gap:34px}
-  .nav-menu a{font-size:10px;font-weight:900;letter-spacing:.2em;text-transform:uppercase;opacity:.75;transition:all .5s var(--ease);position:relative}
-  .nav-menu a:hover{opacity:1;color:var(--red)}
-  .nav-right{display:flex;align-items:center;gap:16px}
-  .lang-switch{display:flex;border:1px solid rgba(20,38,77,.2);border-radius:999px;overflow:hidden}
-  .lang-switch button{border:none;background:transparent;padding:8px 14px;cursor:pointer;font-family:inherit;font-size:10px;font-weight:900;letter-spacing:.15em;color:var(--ink);opacity:.5;transition:all .4s var(--ease)}
-  .lang-switch button.active{background:var(--ink);color:var(--bg);opacity:1}
-  .hamburger{display:none;background:none;border:none;cursor:pointer;padding:6px}
-  .hamburger span{display:block;width:26px;height:2px;background:var(--ink);margin:6px 0;transition:.4s var(--ease)}
-  .mobile-menu{display:none}
+  /* ---------- reveal ---------- */
+  .rv{opacity:0;transform:translateY(34px);transition:opacity .9s var(--ease-out),transform .9s var(--ease-out)}
+  .rv.on{opacity:1;transform:none}
 
-  /* ============ HERO — photo banner ============ */
-  .hero{position:relative;min-height:100svh;display:flex;align-items:center;justify-content:center;padding:150px 0 110px;overflow:hidden;color:var(--bg);
-    background:
-      linear-gradient(160deg, rgba(8,17,38,.84) 0%, rgba(16,31,64,.58) 50%, rgba(8,17,38,.86) 100%),
-      url('https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;
-  }
-  .hero-center{animation:fadeUp 1s var(--ease) both}
-  @keyframes fadeUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
-  .hero-center{position:relative;z-index:10;text-align:center;max-width:900px;margin:0 auto;width:92%}
-  .hero-tag{display:inline-block;margin-bottom:28px}
-  .hero h1{font-weight:900;letter-spacing:-.035em;line-height:.88;text-transform:uppercase;font-size:clamp(2.7rem,7vw,5.6rem);color:#fff;text-shadow:0 20px 60px rgba(0,0,0,.35)}
-  .hero h1 em{font-style:italic;text-transform:lowercase;color:var(--accent);font-weight:800}
-  .hero-sub{margin:32px auto 0;font-size:clamp(1.02rem,1.5vw,1.3rem);color:rgba(253,248,243,.78);max-width:640px;font-weight:500}
-  .hero-ctas{margin-top:42px;display:flex;align-items:center;justify-content:center;gap:34px;flex-wrap:wrap}
-  .hero .arrow-cta{color:#fff}
-  .hero-micro{margin-top:38px;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(253,248,243,.55)}
+  /* ================= NAV ================= */
+  nav.top{position:fixed;top:0;left:0;right:0;z-index:400;height:82px;background:rgba(255,255,255,.88);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid rgba(20,38,77,.07)}
+  .nav-in{height:82px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+  .brand{display:flex;align-items:center;gap:12px}
+  .brand img{height:60px;width:60px;object-fit:contain}
+  .brand span{font-family:'Playfair Display',serif;font-style:italic;font-weight:700;font-size:1.2rem;letter-spacing:-.01em}
+  .brand span i{color:var(--red);font-style:normal}
+  .nav-links{display:flex;gap:34px}
+  .nav-links a{font-size:10px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-soft);transition:color .4s var(--ease);position:relative}
+  .nav-links a::after{content:"";position:absolute;left:0;right:100%;bottom:-6px;height:1px;background:var(--gold);transition:right .45s var(--ease-out)}
+  .nav-links a:hover{color:var(--ink)}
+  .nav-links a:hover::after{right:0}
+  .nav-right{display:flex;align-items:center;gap:14px}
+  .lang{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden}
+  .lang button{border:none;background:transparent;padding:8px 13px;cursor:pointer;font-family:'Inter',sans-serif;font-size:10px;font-weight:700;letter-spacing:.14em;color:var(--ink-soft);transition:all .4s var(--ease)}
+  .lang button.active{background:var(--ink);color:#fff}
+  .burger{display:none;background:none;border:none;cursor:pointer;padding:6px}
+  .burger span{display:block;width:26px;height:2px;background:var(--ink);margin:6px 0;transition:.4s var(--ease)}
+  .mob{display:none}
 
-  /* ============ DESTINATIONS MARQUEE ============ */
-  .marquee{overflow:hidden;background:var(--accent);padding:16px 0;position:relative;z-index:5}
-  .marquee-track{display:flex;align-items:center;gap:56px;width:max-content;animation:marquee 26s linear infinite;will-change:transform}
-  .marquee-track span{font-size:12px;font-weight:900;letter-spacing:.32em;text-transform:uppercase;color:var(--ink);white-space:nowrap}
-  .marquee-track svg{width:14px;height:14px;stroke:var(--ink);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0;opacity:.7}
-  @keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-  /* FAQ open fade */
-  .faq-item[open] .faq-body{animation:faqIn .5s var(--ease)}
-  @keyframes faqIn{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:none}}
+  /* ================= HERO — scroll expansion ================= */
+  .hero-wrap{height:250vh;position:relative;background:var(--white)}
+  .hero-stick{position:sticky;top:0;height:100svh;overflow:hidden;display:flex;align-items:center;justify-content:center}
+  .hero-bg{position:absolute;inset:0;background:
+      radial-gradient(circle at 50% 46%, rgba(240,165,0,.16) 0%, transparent 46%),
+      radial-gradient(circle at 88% 84%, rgba(20,38,77,.07) 0%, transparent 40%),
+      radial-gradient(rgba(20,38,77,.10) 1px, transparent 1px) 0 0/32px 32px,
+      #fff;will-change:opacity}
+  .hero-media{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);overflow:hidden;will-change:width,height,border-radius;z-index:2}
+  .hero-media video{width:100%;height:100%;object-fit:cover;display:block}
+  .hero-media .shade{position:absolute;inset:0;background:linear-gradient(170deg,rgba(11,24,52,.9),rgba(11,24,52,.62) 50%,rgba(11,24,52,.95));will-change:opacity}
+  .hero-media .veil{position:absolute;inset:0;background:#fff;will-change:opacity}
+  .hero-title{position:relative;z-index:3;width:100%;text-align:center;pointer-events:none;will-change:transform,opacity}
+  .hero-title h1{font-size:clamp(2.2rem,7vw,5.4rem);color:var(--ink);text-shadow:0 2px 26px rgba(255,255,255,.85)}
+  .hero-title h1 em{font-style:italic;color:var(--gold-deep)}
+  .hero-title .ln{display:block;will-change:transform}
+  .hero-hint{position:absolute;left:50%;bottom:44px;transform:translateX(-50%);z-index:4;display:flex;flex-direction:column;align-items:center;gap:10px;color:var(--ink);will-change:opacity}
+  .hero-hint span{font-size:9px;font-weight:700;letter-spacing:.34em;text-transform:uppercase;opacity:.55}
+  .hero-hint .mouse{width:24px;height:38px;border:1px solid rgba(20,38,77,.32);border-radius:999px;position:relative}
+  .hero-hint .mouse::after{content:"";position:absolute;left:50%;top:8px;width:3px;height:7px;border-radius:2px;background:var(--gold-deep);transform:translateX(-50%);animation:wheel 1.8s ease-in-out infinite}
+  @keyframes wheel{0%{opacity:0;transform:translate(-50%,0)}40%{opacity:1}100%{opacity:0;transform:translate(-50%,14px)}}
+  .hero-final{position:absolute;inset:0;z-index:5;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:110px 6% 60px;opacity:0;pointer-events:none;will-change:opacity;gap:26px}
+  .hero-final.show{opacity:1;pointer-events:auto}
+  .hero-final .label{color:var(--gold)}
+  .hero-final h2{font-size:clamp(1.7rem,3.6vw,3rem);color:#fff;max-width:16ch}
+  .hero-final h2 em{font-style:italic;color:var(--gold)}
+  .hero-final p{color:rgba(255,255,255,.82);max-width:60ch;font-size:clamp(.95rem,1.15vw,1.08rem)}
+  .hero-final .ctas{display:flex;gap:16px;flex-wrap:wrap;justify-content:center;margin-top:6px}
+  .hero-final .micro{font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.6);font-weight:600}
 
-  /* ============ ABOUT ============ */
-  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
-  .about-visual{position:relative}
-  .about-visual .img-wrap{border-radius:24px;overflow:hidden}
-  .about-visual img{aspect-ratio:4/4.6;object-fit:cover;width:100%;transition:all 1s var(--ease)}
-  .about-visual:hover img{transform:scale(1.08)}
-  .about-stamp{position:absolute;bottom:-34px;right:-20px;background:var(--ink);color:var(--bg);border-radius:24px;padding:28px 34px;text-align:left}
-  .about-stamp strong{display:block;font-size:2rem;font-weight:900;color:var(--accent);letter-spacing:-.02em}
-  .about-stamp span{font-size:9px;font-weight:900;letter-spacing:.3em;text-transform:uppercase;opacity:.8}
-  .about-copy h2{margin:18px 0 26px}
-  .about-copy>p{color:rgba(20,38,77,.7);font-size:1.08rem;font-weight:500;margin-bottom:32px}
-  .about-list{display:grid;gap:0;margin-bottom:38px;border-top:1px solid rgba(20,38,77,.1)}
-  .about-list li{display:flex;gap:16px;align-items:baseline;padding:16px 0;border-bottom:1px solid rgba(20,38,77,.1);font-weight:600;font-size:.98rem}
-  .about-list .idx{font-size:10px;font-weight:900;letter-spacing:.2em;color:var(--red)}
+  /* ================= MARQUEE ================= */
+  .marquee{overflow:hidden;background:var(--gold);padding:17px 0;position:relative;z-index:6}
+  .mq-track{display:flex;align-items:center;gap:52px;width:max-content;animation:mq 26s linear infinite;will-change:transform}
+  .mq-track span{font-size:11px;font-weight:700;letter-spacing:.34em;text-transform:uppercase;color:var(--ink);white-space:nowrap}
+  .mq-track svg{width:13px;height:13px;stroke:var(--ink);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0;opacity:.65}
+  @keyframes mq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 
-  /* ============ SERVICES ============ */
-  .services{background:var(--bg2)}
-  .services-head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:70px;flex-wrap:wrap}
-  .services-head h2{font-size:clamp(2.6rem,7vw,5.5rem)}
-  .services-head p{max-width:340px;color:rgba(20,38,77,.65);font-weight:500}
-  .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-  .svc-card{padding:38px 32px;background:#fff;border:1px solid rgba(20,38,77,.07);border-radius:20px;box-shadow:0 10px 30px rgba(20,38,77,.06);transition:transform .6s var(--ease),box-shadow .6s var(--ease);display:flex;flex-direction:column;min-height:230px}
-  .svc-card:hover{transform:translateY(-8px);box-shadow:0 28px 55px rgba(20,38,77,.14)}
-  .svc-icon{width:60px;height:60px;border-radius:16px;background:rgba(240,165,0,.12);display:flex;align-items:center;justify-content:center;margin-bottom:22px;color:var(--accent);transition:all .6s var(--ease);line-height:1}
-  .svc-card:hover .svc-icon{background:var(--accent);color:#fff}
-  .svc-icon svg{width:28px;height:28px;stroke:currentColor;fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
-  .svc-card h3{font-weight:800;text-transform:uppercase;letter-spacing:.02em;font-size:1.05rem;margin-bottom:12px;line-height:1.1}
-  .svc-card p{font-size:.9rem;line-height:1.65;color:rgba(20,38,77,.68);flex:1}
-  .svc-card.cta-card{background:var(--ink);color:var(--bg);justify-content:center;align-items:flex-start;gap:18px;border:none}
-  .svc-card.cta-card:hover{background:#0d1b3a}
-  .svc-card.cta-card h3{color:var(--bg);font-size:1.3rem}
-  .svc-card.cta-card .label{color:var(--accent)}
+  /* ================= NEURAL NODE ================= */
+  .neural{background:var(--bg);position:relative;overflow:hidden}
+  .neural::before{content:"";position:absolute;width:760px;height:760px;border-radius:50%;background:radial-gradient(circle,rgba(240,165,0,.14),transparent 66%);top:-260px;right:-240px;pointer-events:none}
+  .neural-head{text-align:center;margin:0 auto 60px;max-width:720px}
+  .neural-head h2{margin:20px 0 20px}
+  .neural-head .lead{margin:0 auto}
+  .nodes{position:relative;min-height:560px;display:grid;grid-template-columns:1fr 1fr 1fr;grid-template-rows:auto auto;gap:34px;align-items:center}
+  #nodeSvg{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:1;overflow:visible}
+  .node-line{fill:none;stroke:url(#goldGrad);stroke-width:2.5;stroke-linecap:round;animation:pulseBranch 3.2s var(--ease) infinite}
+  .node-flow{fill:none;stroke:var(--gold);stroke-width:1.4;stroke-dasharray:5 15;opacity:.55;animation:flow 2.4s linear infinite}
+  @keyframes pulseBranch{0%,100%{opacity:.42}50%{opacity:.78}}
+  @keyframes flow{to{stroke-dashoffset:-40}}
+  .sat{position:relative;z-index:2;background:var(--glass);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.9);box-shadow:0 20px 60px rgba(20,38,77,.10);border-radius:22px;overflow:hidden;transition:transform .7s var(--ease-out),box-shadow .7s var(--ease-out)}
+  .sat:hover{transform:translateY(-8px) scale(1.03);box-shadow:0 30px 70px rgba(240,165,0,.28)}
+  .sat img{width:100%;aspect-ratio:16/11;object-fit:cover}
+  .sat .cap{padding:20px 22px 24px}
+  .sat .cap h3{font-size:1.25rem;margin-bottom:6px}
+  .sat .cap p{font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-deep)}
+  .sat-a{grid-column:1;grid-row:1}
+  .sat-b{grid-column:3;grid-row:1}
+  .sat-c{grid-column:1;grid-row:2}
+  .sat-d{grid-column:3;grid-row:2}
+  .core{grid-column:2;grid-row:1 / span 2;position:relative;z-index:3;justify-self:center;align-self:center;width:100%;max-width:360px;aspect-ratio:16/13;border-radius:30px;background:rgba(255,255,255,.8);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.95);box-shadow:0 0 100px rgba(240,165,0,.3),0 30px 70px rgba(20,38,77,.14);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;padding:28px;text-align:center}
+  .core img{width:118px;height:118px;object-fit:contain}
+  .core .core-name{font-family:'Playfair Display',serif;font-style:italic;font-weight:700;font-size:1.15rem}
+  .core .core-sub{font-size:9px;font-weight:700;letter-spacing:.3em;text-transform:uppercase;color:var(--ink-soft)}
+  .live{display:inline-flex;align-items:center;gap:9px;padding:7px 15px;border-radius:999px;background:rgba(255,255,255,.9);border:1px solid var(--line);box-shadow:0 8px 22px rgba(20,38,77,.08)}
+  .live .dot{width:8px;height:8px;border-radius:50%;background:#22c55e;animation:breathe 1.8s ease-in-out infinite}
+  @keyframes breathe{0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(34,197,94,.5)}50%{opacity:.65;box-shadow:0 0 0 6px rgba(34,197,94,0)}}
+  .live .lv{font-size:8px;font-weight:700;letter-spacing:.2em;color:#16a34a}
+  .live .st{font-size:11px;font-weight:500;color:var(--ink)}
 
-  /* ============ CASES (staggered portfolio) ============ */
-  .cases{background:var(--bg2)}
-  .cases-head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:80px;flex-wrap:wrap}
-  .cases-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px}
-  .case-item{background:#fff;border-radius:20px;overflow:hidden;box-shadow:0 12px 34px rgba(20,38,77,.08);transition:transform .6s var(--ease),box-shadow .6s var(--ease);display:flex;flex-direction:column}
-  .case-item:hover{transform:translateY(-8px);box-shadow:0 30px 60px rgba(20,38,77,.16)}
-  .case-item .img-wrap{position:relative;overflow:hidden;aspect-ratio:16/10}
-  .case-item img{width:100%;height:100%;object-fit:cover;transition:transform 1s var(--ease)}
-  .case-item:hover img{transform:scale(1.06)}
-  .case-meta{padding:28px 30px 32px;display:flex;flex-direction:column;flex:1}
-  .case-cat{font-size:10px;font-weight:900;letter-spacing:.3em;text-transform:uppercase;color:var(--red);display:block;margin-bottom:12px}
-  .case-title{font-size:clamp(1.3rem,2.2vw,1.7rem);font-weight:800;text-transform:uppercase;letter-spacing:-.02em;line-height:1;margin-bottom:10px}
-  .case-tags{font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:rgba(20,38,77,.5);margin-bottom:24px}
-  .case-btn{margin-top:auto;align-self:flex-start;display:inline-flex;align-items:center;gap:10px;background:var(--ink);color:#fff;padding:12px 26px;border-radius:999px;font-weight:800;font-size:11px;letter-spacing:.12em;text-transform:uppercase;transition:all .5s var(--ease)}
-  .case-btn:hover{background:var(--red);transform:translateY(-2px)}
+  /* ================= SERVICES ================= */
+  .svc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+  .svc{background:#fff;border:1px solid var(--line);border-radius:24px;padding:34px 30px 36px;transition:transform .6s var(--ease-out),box-shadow .6s var(--ease-out),border-color .6s var(--ease);display:flex;flex-direction:column;min-height:236px}
+  .svc:hover{transform:translateY(-8px);border-color:rgba(240,165,0,.55);box-shadow:0 26px 60px rgba(20,38,77,.10)}
+  .svc-ico{width:48px;height:48px;border-radius:14px;background:var(--gold-soft);display:flex;align-items:center;justify-content:center;color:var(--gold-deep);margin-bottom:22px;transition:transform .5s var(--ease-out),background .5s var(--ease)}
+  .svc:hover .svc-ico{transform:scale(1.1);background:var(--gold);color:var(--ink)}
+  .svc-ico svg{width:24px;height:24px;stroke:currentColor;fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+  .svc h3{font-size:1.18rem;margin-bottom:10px;line-height:1.2}
+  .svc p{font-size:.88rem;color:var(--ink-soft);line-height:1.65;flex:1}
+  .svc-cta{grid-column:1/-1;background:var(--ink);border:none;color:#fff;display:flex;flex-direction:row;align-items:center;justify-content:space-between;gap:34px;padding:46px 52px;min-height:0;margin-top:6px}
+  .svc-cta:hover{border-color:transparent;box-shadow:0 26px 60px rgba(20,38,77,.28)}
+  .svc-cta h3{color:#fff;font-size:clamp(1.5rem,2.4vw,2.1rem);font-style:italic;margin:0}
+  .svc-cta .label{color:var(--gold);display:block;margin-bottom:12px}
+  .svc-cta .link-arrow{color:#fff;flex-shrink:0}
 
-  /* ============ TESTIMONIALS ============ */
-  .testi-head{text-align:center;margin-bottom:70px}
-  .testi-head h2{margin-top:16px}
-  .testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
-  .testi-card{background:#fff;border:1px solid rgba(20,38,77,.08);border-radius:24px;padding:44px 38px;display:flex;flex-direction:column;transition:all .8s var(--ease)}
-  .testi-card:hover{transform:translateY(-8px);box-shadow:0 30px 60px rgba(20,38,77,.1)}
-  .testi-card.featured{background:var(--ink);color:var(--bg);border:none}
-  .testi-stars{color:var(--accent);letter-spacing:4px;margin-bottom:22px;font-size:.95rem}
-  .testi-quote{font-size:1.05rem;font-weight:500;line-height:1.6;flex:1}
-  .testi-card.featured .testi-quote{color:rgba(253,248,243,.9)}
-  .testi-author{margin-top:28px;display:flex;align-items:center;gap:14px;font-size:11px;font-weight:900;letter-spacing:.25em;text-transform:uppercase}
-  .testi-author::before{content:"";width:28px;height:2px;background:var(--accent)}
-  .testi-cta{text-align:center;margin-top:64px}
+  /* ================= ABOUT ================= */
+  .about{background:var(--bg)}
+  .about-grid{display:grid;grid-template-columns:.92fr 1.08fr;gap:80px;align-items:center}
+  .about-media{position:relative}
+  .about-media .fr{border-radius:26px;overflow:hidden;box-shadow:0 34px 80px rgba(20,38,77,.16)}
+  .about-media img{width:100%;aspect-ratio:4/5;object-fit:cover;transition:transform 1.1s var(--ease-out)}
+  .about-media:hover img{transform:scale(1.05)}
+  .about-media .tag{position:absolute;left:-24px;bottom:44px;background:#fff;border:1px solid var(--line);border-radius:20px;padding:22px 26px;box-shadow:0 22px 50px rgba(20,38,77,.14)}
+  .about-media .tag strong{display:block;font-family:'Playfair Display',serif;font-style:italic;font-size:2rem;color:var(--gold-deep);line-height:1}
+  .about-media .tag span{font-size:9px;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--ink-soft)}
+  .about-copy h2{margin:20px 0 24px}
+  .about-copy>p{color:var(--ink-soft);margin-bottom:34px}
+  .about-list{border-top:1px solid var(--line);margin-bottom:36px}
+  .about-list li{display:flex;gap:18px;align-items:baseline;padding:17px 0;border-bottom:1px solid var(--line);font-size:.95rem;font-weight:500}
+  .about-list .n{font-size:10px;font-weight:700;letter-spacing:.2em;color:var(--gold-deep);flex-shrink:0}
 
-  /* ============ FAQ ============ */
-  .faq{background:var(--bg2)}
-  .faq-grid{display:grid;grid-template-columns:.9fr 1.4fr;gap:70px;align-items:start}
-  .faq-side h2{margin-top:16px;margin-bottom:24px}
-  .faq-side p{color:rgba(20,38,77,.65);font-weight:500;margin-bottom:34px}
-  .faq-item{border-bottom:1px solid rgba(20,38,77,.14)}
-  .faq-item:first-child{border-top:1px solid rgba(20,38,77,.14)}
-  .faq-item summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:26px 4px;font-weight:800;text-transform:uppercase;letter-spacing:.02em;font-size:1rem;transition:color .5s var(--ease)}
-  .faq-item summary:hover{color:var(--red)}
-  .faq-item summary::-webkit-details-marker{display:none}
-  .faq-plus{flex-shrink:0;font-size:1.3rem;font-weight:400;color:var(--red);transition:transform .5s var(--ease)}
-  .faq-item[open] .faq-plus{transform:rotate(45deg)}
-  .faq-body{padding:0 4px 26px;color:rgba(20,38,77,.68);font-weight:500;max-width:620px}
+  /* ================= 3D CAROUSEL ================= */
+  .cases{background:#fff;overflow:hidden}
+  .cases-head{display:flex;justify-content:space-between;align-items:flex-end;gap:34px;flex-wrap:wrap;margin-bottom:20px}
+  .cases-head .sec-head{margin-bottom:0}
+  .stage{position:relative;height:460px;perspective:1200px;margin:10px 0 30px;-webkit-user-select:none;user-select:none}
+  .stage::before,.stage::after{content:"";position:absolute;top:0;bottom:0;width:14%;z-index:5;pointer-events:none}
+  .stage::before{left:0;background:linear-gradient(90deg,#fff,transparent)}
+  .stage::after{right:0;background:linear-gradient(270deg,#fff,transparent)}
+  .ring{position:absolute;inset:0;margin:auto;transform-style:preserve-3d;cursor:grab;touch-action:pan-y;will-change:transform}
+  .ring:active{cursor:grabbing}
+  .face{position:absolute;top:50%;left:50%;border-radius:18px;overflow:hidden;box-shadow:0 24px 60px rgba(20,38,77,.22);background:#eee;backface-visibility:hidden;-webkit-backface-visibility:hidden}
+  .face img{width:100%;height:100%;object-fit:cover;pointer-events:none}
+  .face .fcap{position:absolute;left:0;right:0;bottom:0;padding:34px 16px 14px;background:linear-gradient(transparent,rgba(11,24,52,.88));color:#fff}
+  .face .fcap b{display:block;font-family:'Playfair Display',serif;font-weight:600;font-size:1rem;line-height:1.15}
+  .face .fcap i{font-style:normal;font-size:8px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold)}
+  .stage-hint{text-align:center;font-size:10px;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:44px}
+  .cases-foot{display:flex;justify-content:center}
 
-  /* ============ CONTACT ============ */
-  .contact{background:var(--ink);color:var(--bg);position:relative;overflow:hidden}
-  .contact::before{content:"";position:absolute;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(240,165,0,.18),transparent 65%);top:-200px;right:-150px}
-  .contact-inner{position:relative;z-index:2}
-  .contact-head{text-align:center;max-width:820px;margin:0 auto 64px}
-  .contact .label{color:var(--accent)}
-  .contact h2{font-size:clamp(2.4rem,6vw,4.8rem);margin:20px 0 22px;color:var(--bg);font-weight:900;letter-spacing:-.03em;line-height:.9;text-transform:uppercase}
-  .contact h2 em{font-style:italic;text-transform:lowercase;color:var(--accent)}
-  .contact-sub{color:rgba(253,248,243,.7);font-size:1.15rem;font-weight:500}
-  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px;margin-bottom:56px}
-  .form-card{background:var(--bg);color:var(--ink);border-radius:24px;padding:44px 40px}
-  .form-card h3{font-weight:900;text-transform:uppercase;letter-spacing:.02em;font-size:1.3rem;margin-bottom:6px}
-  .form-card .form-note{font-size:.85rem;color:rgba(20,38,77,.55);font-weight:500;margin-bottom:28px}
-  .field{margin-bottom:18px}
-  .field label{display:block;font-size:9px;font-weight:900;letter-spacing:.3em;text-transform:uppercase;color:var(--red);margin-bottom:8px}
-  .field input,.field select,.field textarea{width:100%;border:1px solid rgba(20,38,77,.18);border-radius:12px;padding:14px 16px;font-family:inherit;font-size:.95rem;font-weight:600;color:var(--ink);background:#fff;transition:border-color .4s var(--ease),box-shadow .4s var(--ease);outline:none}
-  .field input:focus,.field select:focus,.field textarea:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(240,165,0,.18)}
-  .field textarea{resize:vertical;min-height:96px}
-  .form-send{width:100%;justify-content:center;gap:12px;padding:16px 32px;font-size:13px}
-  .map-card{border-radius:24px;overflow:hidden;display:flex;flex-direction:column;background:#0d1b3a;border:1px solid rgba(255,255,255,.08)}
-  .map-card iframe{width:100%;flex:1;min-height:380px;border:0;display:block}
-  .map-foot{padding:22px 26px;display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap}
-  .map-foot .label{color:var(--accent)}
-  .map-foot span.cities{font-size:.9rem;font-weight:700;color:rgba(253,248,243,.85)}
-  .contact-data{display:flex;justify-content:center;gap:clamp(18px,4vw,60px);flex-wrap:wrap;font-size:11px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:rgba(253,248,243,.75)}
-  .contact-data a:hover{color:var(--accent)}
+  /* ================= FAQ ================= */
+  .faq{background:var(--bg)}
+  .faq-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:76px;align-items:start}
+  .faq-side h2{margin:20px 0 22px}
+  .faq-side p{color:var(--ink-soft);margin-bottom:32px}
+  .fq{border-bottom:1px solid var(--line);background:transparent}
+  .fq:first-child{border-top:1px solid var(--line)}
+  .fq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:22px;padding:26px 4px;font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:600;transition:color .4s var(--ease)}
+  .fq summary::-webkit-details-marker{display:none}
+  .fq summary:hover{color:var(--gold-deep)}
+  .fq .pl{flex-shrink:0;width:30px;height:30px;border-radius:50%;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:1.1rem;font-weight:300;color:var(--gold-deep);transition:transform .5s var(--ease-out),background .4s var(--ease)}
+  .fq[open] .pl{transform:rotate(45deg);background:var(--gold-soft)}
+  .fq-body{padding:0 4px 28px;color:var(--ink-soft);max-width:640px;animation:fq .5s var(--ease-out)}
+  @keyframes fq{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:none}}
 
-  /* ============ FOOTER ============ */
-  footer{background:var(--bg2);padding:90px 0 0}
-  .footer-grid{display:grid;grid-template-columns:5fr 7fr;gap:60px;padding-bottom:70px}
-  .footer-brand{display:flex;align-items:center;gap:14px;font-weight:900;text-transform:uppercase;font-size:1.2rem;letter-spacing:.05em;margin-bottom:22px}
-  .footer-brand img{height:72px;width:72px;object-fit:contain}
-  .footer-mission{color:rgba(20,38,77,.6);font-weight:500;max-width:360px;font-size:.95rem}
-  .footer-ig{display:inline-flex;align-items:center;gap:12px;margin-top:24px;font-weight:800;font-size:.95rem;color:var(--ink);transition:color .4s var(--ease)}
-  .footer-ig:hover{color:var(--red)}
-  .footer-ig .ig-icon{width:42px;height:42px;border-radius:12px;background:var(--ink);display:flex;align-items:center;justify-content:center;transition:background .4s var(--ease)}
-  .footer-ig:hover .ig-icon{background:var(--red)}
-  .footer-ig .ig-icon svg{width:20px;height:20px;stroke:#fff;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
-  .footer-cols{display:grid;grid-template-columns:repeat(3,1fr);gap:40px}
-  .footer-col h4{font-size:10px;font-weight:900;letter-spacing:.4em;text-transform:uppercase;color:var(--red);margin-bottom:8px}
-  .footer-col h4::after{content:"";display:block;width:26px;height:2px;background:var(--accent);margin-top:8px}
-  .footer-col ul{margin-top:20px;display:grid;gap:12px}
-  .footer-col a{font-size:.9rem;font-weight:600;color:rgba(20,38,77,.7);transition:color .5s var(--ease)}
-  .footer-col a:hover{color:var(--red)}
-  .footer-col li{font-size:.9rem;font-weight:600;color:rgba(20,38,77,.7)}
-  .footer-bottom{border-top:1px solid rgba(20,38,77,.1);padding:24px 0;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:9px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:rgba(20,38,77,.3)}
+  /* ================= CONTACT ================= */
+  .contact{background:#fff;position:relative}
+  .contact::before{content:"";position:absolute;width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,rgba(240,165,0,.13),transparent 68%);top:-240px;left:-220px;pointer-events:none}
+  .contact-head{text-align:center;max-width:800px;margin:0 auto 62px;position:relative}
+  .contact-head h2{margin:20px 0 20px}
+  .contact-head .lead{margin:0 auto}
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px;position:relative}
+  .form-card{background:var(--bg);border:1px solid var(--line);border-radius:28px;padding:46px 42px}
+  .form-card h3{font-size:1.6rem;font-style:italic;margin-bottom:6px}
+  .form-note{font-size:.85rem;color:var(--ink-soft);margin-bottom:30px}
+  .fld{margin-bottom:18px}
+  .fld label{display:block;font-size:9px;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:9px}
+  .fld input,.fld select,.fld textarea{width:100%;border:1px solid var(--line);border-radius:14px;padding:15px 17px;font-family:'Inter',sans-serif;font-size:.95rem;font-weight:500;color:var(--ink);background:#fff;outline:none;transition:border-color .4s var(--ease),box-shadow .4s var(--ease)}
+  .fld input:focus,.fld select:focus,.fld textarea:focus{border-color:var(--gold);box-shadow:0 0 0 4px rgba(240,165,0,.16)}
+  .fld textarea{resize:vertical;min-height:104px}
+  .form-send{width:100%;margin-top:6px;padding:17px 34px;font-size:12px}
+  .map-card{border-radius:28px;overflow:hidden;border:1px solid var(--line);display:flex;flex-direction:column;background:var(--bg)}
+  .map-card iframe{width:100%;flex:1;min-height:420px;border:0;display:block;filter:saturate(.92)}
+  .map-foot{padding:24px 28px;display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap}
+  .map-foot .cities{font-size:.9rem;font-weight:600}
+  .contact-data{display:flex;justify-content:center;gap:clamp(20px,4vw,56px);flex-wrap:wrap;margin-top:56px;position:relative}
+  .contact-data a{display:flex;align-items:center;gap:11px;font-size:.92rem;font-weight:600;transition:color .4s var(--ease)}
+  .contact-data a:hover{color:var(--gold-deep)}
+  .contact-data svg{width:17px;height:17px;stroke:var(--gold-deep);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
 
-  /* Floating WhatsApp */
-  .float-wa{position:fixed;bottom:26px;right:26px;z-index:150;width:60px;height:60px;border-radius:50%;background:#25d366;display:flex;align-items:center;justify-content:center;box-shadow:0 14px 34px rgba(20,38,77,.25);transition:transform .5s var(--ease)}
+  /* ================= FOOTER ================= */
+  footer{background:var(--bg);padding:96px 0 0;border-top:1px solid var(--line)}
+  .f-grid{display:grid;grid-template-columns:2.1fr 1fr 1fr 1.4fr;gap:48px;padding-bottom:64px}
+  .f-brand{display:flex;align-items:center;gap:14px;margin-bottom:20px}
+  .f-brand img{height:70px;width:70px;object-fit:contain}
+  .f-brand span{font-family:'Playfair Display',serif;font-style:italic;font-weight:700;font-size:1.3rem}
+  .f-brand span i{color:var(--red);font-style:normal}
+  .f-mission{color:var(--ink-soft);font-size:.92rem;max-width:340px;margin-bottom:26px}
+  .socials{display:flex;gap:12px}
+  .socials a{width:42px;height:42px;border-radius:50%;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;transition:all .45s var(--ease)}
+  .socials a:hover{background:var(--ink);border-color:var(--ink);transform:translateY(-3px)}
+  .socials svg{width:17px;height:17px;stroke:var(--ink);fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;transition:stroke .45s var(--ease)}
+  .socials a:hover svg{stroke:#fff}
+  .f-col h4{font-family:'Inter',sans-serif;font-size:9px;font-weight:700;letter-spacing:.34em;text-transform:uppercase;color:var(--gold-deep)}
+  .f-col h4::after{content:"";display:block;width:24px;height:1px;background:var(--gold);margin-top:8px}
+  .f-col ul{margin-top:22px;display:grid;gap:13px}
+  .f-col a,.f-col li{font-size:.9rem;color:var(--ink-soft);transition:color .4s var(--ease)}
+  .f-col a:hover{color:var(--gold-deep)}
+  .f-note{font-size:.9rem;color:var(--ink-soft);margin:22px 0 16px}
+  .quick{display:flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:6px 6px 6px 20px}
+  .quick input{flex:1;border:none;outline:none;background:transparent;font-family:'Inter',sans-serif;font-size:.88rem;color:var(--ink);min-width:0}
+  .quick button{width:40px;height:40px;flex-shrink:0;border-radius:50%;border:none;background:var(--gold);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .45s var(--ease)}
+  .quick button:hover{background:var(--ink);transform:rotate(-45deg)}
+  .quick button svg{width:16px;height:16px;stroke:var(--ink);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;transition:stroke .45s var(--ease)}
+  .quick button:hover svg{stroke:#fff}
+  .f-bottom{border-top:1px solid var(--line);padding:24px 0;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:9px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:rgba(20,38,77,.34)}
+
+  /* float wa */
+  .float-wa{position:fixed;bottom:26px;right:26px;z-index:350;width:58px;height:58px;border-radius:50%;background:#25d366;display:flex;align-items:center;justify-content:center;box-shadow:0 14px 34px rgba(20,38,77,.25);transition:transform .5s var(--ease-out)}
   .float-wa:hover{transform:scale(1.12)}
-  .float-wa svg{width:30px;height:30px;fill:#fff}
+  .float-wa svg{width:29px;height:29px;fill:#fff}
 
-  /* ============ RESPONSIVE ============ */
-  @media(max-width:1000px){
+  /* ================= RESPONSIVE ================= */
+  @media(max-width:1080px){
     .svc-grid{grid-template-columns:repeat(2,1fr)}
-    .faq-grid{grid-template-columns:1fr;gap:44px}
-    .footer-grid{grid-template-columns:1fr;gap:50px}
+    .svc-cta{grid-column:span 2}
+    .about-grid{grid-template-columns:1fr;gap:64px}
+    .faq-grid{grid-template-columns:1fr;gap:46px}
     .contact-grid{grid-template-columns:1fr}
+    .f-grid{grid-template-columns:1fr 1fr;gap:44px}
   }
   @media(max-width:860px){
-    section{padding:72px 0}
+    .sec{padding:84px 0}
     .container{width:90%}
-    /* nav: only brand + lang + hamburger */
-    .nav-menu{display:none}
-    .nav-inner>.nav-right>.btn-pill{display:none!important}
-    .hamburger{display:block}
-    .nav-brand img{height:54px;width:54px}
-    .mobile-menu{display:block;position:fixed;top:80px;left:0;right:0;z-index:190;background:rgba(253,248,243,.99);border-bottom:1px solid rgba(20,38,77,.08);transform:translateY(-130%);transition:transform .5s var(--ease);box-shadow:0 30px 60px rgba(20,38,77,.15)}
-    .mobile-menu.open{transform:translateY(0)}
-    .mobile-menu a{display:block;padding:19px 6%;font-size:12px;font-weight:900;letter-spacing:.3em;text-transform:uppercase;border-bottom:1px solid rgba(20,38,77,.06)}
-    .mobile-menu a:last-child{background:var(--red);color:#fff;border-bottom:none}
-    /* hero: copy first, 3D as subtle accents in corners */
-    .hero{padding:130px 0 100px;min-height:100svh}
-    .hero h1{font-size:clamp(2.5rem,12vw,3.7rem);line-height:.92}
-    .hero-sub{font-size:1.02rem;max-width:90%}
-    .hero-ctas{flex-direction:column;gap:16px;margin-top:36px}
-    .hero-ctas .btn-pill,.hero-ctas .btn-wa{width:100%;max-width:340px;justify-content:center;padding:16px 32px;font-size:13px}
-    .hero-micro{margin-top:32px;font-size:10px;line-height:1.9;max-width:300px;margin-left:auto;margin-right:auto}
-    /* marquee: bigger presence on mobile */
-    .marquee{padding:15px 0}
-    .marquee-track{gap:40px;animation-duration:22s}
-    .marquee-track span{font-size:11px;letter-spacing:.26em}
-    /* about */
-    .about-grid{grid-template-columns:1fr;gap:64px}
-    .about-stamp{right:6px;bottom:-26px;padding:20px 24px}
-    .about-stamp strong{font-size:1.5rem}
+    .nav-links{display:none}
+    .nav-right>.btn{display:none}
+    .burger{display:block}
+    .brand img{height:52px;width:52px}
+    .brand span{font-size:1.05rem}
+    nav.top{background:rgba(255,255,255,.97);backdrop-filter:none;-webkit-backdrop-filter:none}
+    .mob{display:block;position:fixed;top:82px;left:0;right:0;z-index:390;background:#fff;border-bottom:1px solid var(--line);transform:translateY(-135%);transition:transform .55s var(--ease-out);box-shadow:0 26px 50px rgba(20,38,77,.14)}
+    .mob.open{transform:translateY(0)}
+    .mob a{display:block;padding:19px 6%;font-size:11px;font-weight:700;letter-spacing:.28em;text-transform:uppercase;border-bottom:1px solid rgba(20,38,77,.06)}
+    .mob a:last-child{background:var(--gold);border-bottom:none}
+    /* hero */
+    .hero-wrap{height:210vh}
+    .hero-title{padding:0 6%}
+    .hero-title h1{font-size:clamp(1.5rem,7.4vw,2.6rem)}
+    .hero-final{padding:96px 7% 44px;gap:20px}
+    .hero-final h2{font-size:clamp(1.4rem,6.6vw,2rem)}
+    .hero-final p{font-size:.92rem}
+    .hero-final .ctas{flex-direction:column;width:100%;max-width:330px;gap:12px}
+    .hero-final .ctas .btn{width:100%}
+    .hero-hint{bottom:26px}
+    /* marquee */
+    .marquee{padding:14px 0}
+    .mq-track{gap:38px;animation-duration:22s}
+    .mq-track span{font-size:10px;letter-spacing:.26em}
+    /* neural: stack, no blur */
+    .neural-head{margin-bottom:40px}
+    .nodes{grid-template-columns:1fr;grid-template-rows:none;min-height:0;gap:18px}
+    .sat,.core{grid-column:1!important;grid-row:auto!important;backdrop-filter:none;-webkit-backdrop-filter:none;background:#fff}
+    .core{order:-1;max-width:none;aspect-ratio:auto;padding:30px 24px;box-shadow:0 0 60px rgba(240,165,0,.22),0 18px 40px rgba(20,38,77,.1)}
+    .core img{width:96px;height:96px}
+    #nodeSvg{display:none}
+    .sat img{aspect-ratio:16/9}
     /* services */
-    .services-head{margin-bottom:44px}
-    .svc-card{padding:28px 22px;min-height:0}
-    .svc-icon{margin-bottom:16px}
-    .svc-icon svg{width:26px;height:26px}
-    /* cases */
-    .cases-head{margin-bottom:50px}
-    .cases-grid{grid-template-columns:1fr;gap:24px}
+    .svc{padding:28px 24px;min-height:0}
+    .svc-cta{flex-direction:column;align-items:flex-start;gap:18px;padding:32px 26px}
+    .svc-cta h3{font-size:1.4rem}
+    /* about */
+    .about-media .tag{left:auto;right:14px;bottom:-22px;padding:18px 22px}
+    .about-media .tag strong{font-size:1.6rem}
+    /* carousel */
+    .stage{height:340px}
+    .stage::before,.stage::after{width:8%}
     /* faq */
-    .faq-item summary{font-size:.92rem;padding:22px 2px}
+    .fq summary{font-size:1rem;padding:22px 2px}
     /* contact */
-    .contact-head{margin-bottom:44px}
-    .contact-grid{gap:22px;margin-bottom:44px}
-    .form-card{padding:32px 22px}
-    .field input,.field select,.field textarea{font-size:16px;padding:13px 14px}
+    .contact-head{margin-bottom:40px}
+    .form-card{padding:32px 24px}
+    .fld input,.fld select,.fld textarea{font-size:16px;padding:14px 15px}
     .map-card iframe{min-height:300px}
-    .map-foot{flex-direction:column;align-items:flex-start;gap:8px;padding:18px 20px}
-    .contact-data{flex-direction:column;align-items:center;gap:16px;text-align:center}
+    .map-foot{flex-direction:column;align-items:flex-start;gap:8px;padding:20px 22px}
+    .contact-data{flex-direction:column;align-items:center;gap:16px;margin-top:40px}
     /* footer */
-    footer{padding:64px 0 0}
-    .footer-grid{gap:44px;padding-bottom:50px}
-    .footer-bottom{flex-direction:column;align-items:center;text-align:center;gap:8px}
+    footer{padding:70px 0 0}
+    .f-grid{grid-template-columns:1fr;gap:40px;padding-bottom:50px}
+    .f-mission{max-width:none}
+    .f-bottom{flex-direction:column;align-items:center;text-align:center;gap:8px}
+    .float-wa{width:54px;height:54px;bottom:20px;right:20px}
   }
   @media(max-width:560px){
-    .h-big{font-size:clamp(1.9rem,9.5vw,2.5rem)}
-    .h-huge{font-size:clamp(2.1rem,10.5vw,2.9rem)!important}
-    .services-head h2{font-size:clamp(2.1rem,10.5vw,2.9rem)}
-    .contact h2{font-size:clamp(1.9rem,9.5vw,2.6rem)}
+    .sec-head{margin-bottom:44px}
+    .h-display{font-size:clamp(1.9rem,8.4vw,2.5rem)}
     .svc-grid{grid-template-columns:1fr}
-    .footer-cols{grid-template-columns:1fr;gap:34px}
-    .nav-brand span.txt{font-size:.92rem}
-    .lang-switch button{padding:7px 11px}
-    .services-head p{max-width:none}
+    .f-grid{grid-template-columns:1fr}
+    .stage{height:300px}
+  }
+  @media (prefers-reduced-motion: reduce){
+    .node-line,.node-flow,.live .dot,.hero-hint .mouse::after{animation:none}
   }
 </style>
 </head>
 <body>
 
-<!-- ============ NAV ============ -->
+<!-- ================= NAV ================= -->
 <nav class="top">
-  <div class="container nav-inner">
-    <a href="#" class="nav-brand">
+  <div class="container nav-in">
+    <a href="#" class="brand">
       <img src="assets/logo.png" alt="ODY VISAS" onerror="this.style.display='none'">
-      <span class="txt">ODY<span class="dot">·</span>VISAS</span>
+      <span>ODY<i>·</i>VISAS</span>
     </a>
-    <div class="nav-menu">
-      <a href="#servicios" data-i18n="nav_services"></a>
-      <a href="#nosotros" data-i18n="nav_about"></a>
-      <a href="#casos" data-i18n="nav_cases"></a>
-      <a href="#faq" data-i18n="nav_faq"></a>
-      <a href="#contacto" data-i18n="nav_contact"></a>
+    <div class="nav-links">
+      <a href="#destinos" data-i="nav_dest"></a>
+      <a href="#servicios" data-i="nav_serv"></a>
+      <a href="#nosotros" data-i="nav_about"></a>
+      <a href="#casos" data-i="nav_cases"></a>
+      <a href="#faq" data-i="nav_faq"></a>
     </div>
     <div class="nav-right">
-      <div class="lang-switch" role="group" aria-label="Idioma / Language">
-        <button id="lang-es" onclick="setLang('es')">ES</button>
-        <button id="lang-en" onclick="setLang('en')">EN</button>
+      <div class="lang" role="group" aria-label="Idioma / Language">
+        <button id="l-es" onclick="setLang('es')">ES</button>
+        <button id="l-en" onclick="setLang('en')">EN</button>
       </div>
-      <a href="#contacto" class="btn-pill" style="display:inline-flex" data-i18n="nav_cta"></a>
-      <button class="hamburger" id="hamburger" aria-label="Menú"><span></span><span></span></button>
+      <a href="#contacto" class="btn btn-gold" data-i="nav_cta"></a>
+      <button class="burger" id="burger" aria-label="Menu"><span></span><span></span></button>
     </div>
   </div>
 </nav>
-<div class="mobile-menu" id="mobileMenu">
-  <a href="#servicios" data-i18n="nav_services"></a>
-  <a href="#nosotros" data-i18n="nav_about"></a>
-  <a href="#casos" data-i18n="nav_cases"></a>
-  <a href="#faq" data-i18n="nav_faq"></a>
-  <a href="#contacto" data-i18n="nav_contact"></a>
+<div class="mob" id="mob">
+  <a href="#destinos" data-i="nav_dest"></a>
+  <a href="#servicios" data-i="nav_serv"></a>
+  <a href="#nosotros" data-i="nav_about"></a>
+  <a href="#casos" data-i="nav_cases"></a>
+  <a href="#faq" data-i="nav_faq"></a>
+  <a href="#contacto" data-i="nav_contact"></a>
 </div>
 
-<!-- ============ HERO — PHOTO BANNER ============ -->
-<header class="hero" id="inicio">
-  <div class="hero-center">
-    <span class="label label-gold hero-tag" data-i18n="hero_tag"></span>
-    <h1 data-i18n-html="hero_title"></h1>
-    <p class="hero-sub" data-i18n="hero_sub"></p>
-    <div class="hero-ctas">
-      <a href="#contacto" class="btn-pill" data-i18n="hero_cta1"></a>
-      <a href="https://wa.me/18094882222" target="_blank" rel="noopener" class="btn-wa"><svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.14-.14.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.68-1.62-.93-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.5 0 1.47 1.07 2.89 1.22 3.09.15.2 2.1 3.2 5.1 4.49.71.31 1.27.49 1.7.63.72.23 1.37.2 1.88.12.58-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.28-.2-.58-.35zM12.05 21.79h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.9-9.88a9.83 9.83 0 0 1 7 2.9 9.83 9.83 0 0 1 2.89 7c0 5.45-4.44 9.87-9.9 9.87zm8.42-18.29A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.9c0 2.1.55 4.14 1.59 5.95L.07 24l6.3-1.65a11.9 11.9 0 0 0 5.68 1.44h.01c6.55 0 11.89-5.34 11.89-11.9 0-3.18-1.24-6.16-3.48-8.4z"/></svg><span data-i18n="hero_cta2"></span></a>
+<!-- ================= HERO: scroll expansion video ================= -->
+<header class="hero-wrap" id="inicio">
+  <div class="hero-stick">
+    <div class="hero-bg" id="heroBg"></div>
+
+    <div class="hero-media" id="heroMedia">
+      <video id="heroVideo" muted loop playsinline preload="metadata"
+             poster="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&w=1200&auto=format&fit=crop"></video>
+      <div class="shade" id="heroShade"></div>
+      <div class="veil" id="heroVeil"></div>
     </div>
-    <p class="hero-micro" data-i18n="hero_micro"></p>
+
+    <div class="hero-title" id="heroTitle">
+      <h1>
+        <span class="ln" id="ln1" data-i="hero_l1"></span>
+        <span class="ln" id="ln2" data-ih="hero_l2"></span>
+      </h1>
+    </div>
+
+    <div class="hero-hint" id="heroHint">
+      <div class="mouse"></div>
+      <span data-i="hero_hint"></span>
+    </div>
+
+    <div class="hero-final" id="heroFinal">
+      <span class="label" data-i="hero_tag"></span>
+      <h2 data-ih="hero_final"></h2>
+      <p data-i="hero_sub"></p>
+      <div class="ctas">
+        <a href="#contacto" class="btn btn-gold" data-i="hero_cta1"></a>
+        <a href="https://wa.me/18094882222" target="_blank" rel="noopener" class="btn btn-line">
+          <svg viewBox="0 0 24 24" style="width:16px;height:16px;fill:currentColor"><path d="M17.5 14.4c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.14-.14.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.68-1.62-.93-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.5 0 1.47 1.07 2.89 1.22 3.09.15.2 2.1 3.2 5.1 4.49.71.31 1.27.49 1.7.63.72.23 1.37.2 1.88.12.58-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.28-.2-.58-.35zM12.05 21.79h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.9-9.88a9.83 9.83 0 0 1 7 2.9 9.83 9.83 0 0 1 2.89 7c0 5.45-4.44 9.87-9.9 9.87zm8.42-18.29A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.9c0 2.1.55 4.14 1.59 5.95L.07 24l6.3-1.65a11.9 11.9 0 0 0 5.68 1.44h.01c6.55 0 11.89-5.34 11.89-11.9 0-3.18-1.24-6.16-3.48-8.4z"/></svg>
+          <span data-i="hero_cta2"></span>
+        </a>
+      </div>
+      <p class="micro" data-i="hero_micro"></p>
+    </div>
   </div>
 </header>
 
-<!-- ============ DESTINATIONS MARQUEE ============ -->
+<!-- ================= MARQUEE ================= -->
 <div class="marquee" aria-hidden="true">
-  <div class="marquee-track" id="marqueeTrack">
+  <div class="mq-track" id="mqTrack">
     <span>Estados Unidos</span><svg viewBox="0 0 24 24"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4 20-7z"/></svg>
     <span>Canadá</span><svg viewBox="0 0 24 24"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4 20-7z"/></svg>
     <span>Europa</span><svg viewBox="0 0 24 24"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4 20-7z"/></svg>
@@ -354,446 +448,561 @@
   </div>
 </div>
 
-<!-- ============ SERVICES ============ -->
-<section class="services" id="servicios">
+<!-- ================= NEURAL NODES ================= -->
+<section class="sec neural dots" id="destinos">
   <div class="container">
-    <div class="services-head reveal">
-      <div>
-        <span class="label label-accent" data-i18n="services_tag"></span>
-        <h2 class="h-huge" style="margin-top:16px" data-i18n="services_title"></h2>
+    <div class="neural-head rv">
+      <span class="label" data-i="dest_tag"></span>
+      <h2 class="h-display" data-ih="dest_title"></h2>
+      <p class="lead" data-i="dest_sub"></p>
+    </div>
+
+    <div class="nodes" id="nodes">
+      <svg id="nodeSvg" aria-hidden="true">
+        <defs>
+          <linearGradient id="goldGrad" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stop-color="#f7c65a" stop-opacity=".9"/>
+            <stop offset="100%" stop-color="#f0a500" stop-opacity=".1"/>
+          </linearGradient>
+        </defs>
+      </svg>
+
+      <article class="sat sat-a rv" data-sat>
+        <img src="https://images.unsplash.com/photo-1485738422979-f5c462d49f74?q=80&w=700&auto=format&fit=crop" alt="Estados Unidos" loading="lazy">
+        <div class="cap"><h3 data-i="d1_t"></h3><p data-i="d1_s"></p></div>
+      </article>
+
+      <article class="sat sat-b rv" data-sat>
+        <img src="https://images.unsplash.com/photo-1517935706615-2717063c2225?q=80&w=700&auto=format&fit=crop" alt="Canadá" loading="lazy">
+        <div class="cap"><h3 data-i="d2_t"></h3><p data-i="d2_s"></p></div>
+      </article>
+
+      <div class="core" id="core">
+        <img src="assets/logo.png" alt="ODY VISAS" onerror="this.style.display='none'">
+        <div>
+          <div class="core-name">ODY VISAS</div>
+          <div class="core-sub" data-i="core_sub"></div>
+        </div>
+        <div class="live"><span class="dot"></span><span class="lv">LIVE</span><span class="st" data-i="live_txt"></span></div>
       </div>
-      <p data-i18n="services_sub"></p>
+
+      <article class="sat sat-c rv" data-sat>
+        <img src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?q=80&w=700&auto=format&fit=crop" alt="Europa" loading="lazy">
+        <div class="cap"><h3 data-i="d3_t"></h3><p data-i="d3_s"></p></div>
+      </article>
+
+      <article class="sat sat-d rv" data-sat>
+        <img src="https://images.unsplash.com/photo-1511895426328-dc8714191300?q=80&w=700&auto=format&fit=crop" alt="Peticiones familiares" loading="lazy">
+        <div class="cap"><h3 data-i="d4_t"></h3><p data-i="d4_s"></p></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SERVICES ================= -->
+<section class="sec" id="servicios">
+  <div class="container">
+    <div class="sec-head rv">
+      <span class="label" data-i="serv_tag"></span>
+      <h2 class="h-display" data-ih="serv_title"></h2>
+      <p class="lead" data-i="serv_sub"></p>
     </div>
     <div class="svc-grid">
-      <div class="svc-card reveal"><div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4 20-7z"/></svg></div><h3 data-i18n="s1_t"></h3><p data-i18n="s1_d"></p></div>
-      <div class="svc-card reveal"><div class="svc-icon"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg></div><h3 data-i18n="s2_t"></h3><p data-i18n="s2_d"></p></div>
-      <div class="svc-card reveal"><div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/><path d="M2 21c0-3 1.85-5.36 5.08-6"/></svg></div><h3 data-i18n="s3_t"></h3><p data-i18n="s3_d"></p></div>
-      <div class="svc-card reveal"><div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><h3 data-i18n="s4_t"></h3><p data-i18n="s4_d"></p></div>
-      <div class="svc-card reveal"><div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M1 4v6h6"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg></div><h3 data-i18n="s5_t"></h3><p data-i18n="s5_d"></p></div>
-      <div class="svc-card reveal"><div class="svc-icon"><svg viewBox="0 0 24 24"><rect x="4" y="2" width="16" height="20" rx="2"/><circle cx="12" cy="10" r="3"/><path d="M8 17h8"/></svg></div><h3 data-i18n="s6_t"></h3><p data-i18n="s6_d"></p></div>
-      <div class="svc-card reveal"><div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M23 6l-9.5 9.5-5-5L1 18"/><path d="M17 6h6v6"/></svg></div><h3 data-i18n="s7_t"></h3><p data-i18n="s7_d"></p></div>
-      <div class="svc-card reveal"><div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg></div><h3 data-i18n="s8_t"></h3><p data-i18n="s8_d"></p></div>
-      <a href="#contacto" class="svc-card cta-card reveal">
-        <span class="label" data-i18n="services_cta_tag"></span>
-        <h3 data-i18n="services_cta"></h3>
-        <span style="font-size:1.6rem;color:var(--accent)">→</span>
+      <article class="svc rv"><div class="svc-ico"><svg viewBox="0 0 24 24"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4 20-7z"/></svg></div><h3 data-i="s1_t"></h3><p data-i="s1_d"></p></article>
+      <article class="svc rv"><div class="svc-ico"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg></div><h3 data-i="s2_t"></h3><p data-i="s2_d"></p></article>
+      <article class="svc rv"><div class="svc-ico"><svg viewBox="0 0 24 24"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/><path d="M2 21c0-3 1.85-5.36 5.08-6"/></svg></div><h3 data-i="s3_t"></h3><p data-i="s3_d"></p></article>
+      <article class="svc rv"><div class="svc-ico"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><h3 data-i="s4_t"></h3><p data-i="s4_d"></p></article>
+      <article class="svc rv"><div class="svc-ico"><svg viewBox="0 0 24 24"><path d="M1 4v6h6"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg></div><h3 data-i="s5_t"></h3><p data-i="s5_d"></p></article>
+      <article class="svc rv"><div class="svc-ico"><svg viewBox="0 0 24 24"><rect x="4" y="2" width="16" height="20" rx="2"/><circle cx="12" cy="10" r="3"/><path d="M8 17h8"/></svg></div><h3 data-i="s6_t"></h3><p data-i="s6_d"></p></article>
+      <article class="svc rv"><div class="svc-ico"><svg viewBox="0 0 24 24"><path d="M23 6l-9.5 9.5-5-5L1 18"/><path d="M17 6h6v6"/></svg></div><h3 data-i="s7_t"></h3><p data-i="s7_d"></p></article>
+      <article class="svc rv"><div class="svc-ico"><svg viewBox="0 0 24 24"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg></div><h3 data-i="s8_t"></h3><p data-i="s8_d"></p></article>
+      <a href="#contacto" class="svc svc-cta rv">
+        <div>
+          <span class="label" data-i="serv_cta_tag"></span>
+          <h3 data-i="serv_cta"></h3>
+        </div>
+        <span class="link-arrow"><span data-i="serv_cta_link"></span> &rarr;</span>
       </a>
     </div>
   </div>
 </section>
 
-<!-- ============ ABOUT ============ -->
-<section id="nosotros">
+<!-- ================= ABOUT ================= -->
+<section class="sec about" id="nosotros">
   <div class="container about-grid">
-    <div class="about-visual reveal">
-      <div class="img-wrap">
-        <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=1100&auto=format&fit=crop" alt="Asesoría migratoria" loading="lazy">
-      </div>
-      <div class="about-stamp">
-        <strong data-i18n="about_badge_num"></strong>
-        <span data-i18n="about_badge_label"></span>
-      </div>
+    <div class="about-media rv">
+      <div class="fr"><img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=900&auto=format&fit=crop" alt="Asesoría migratoria" loading="lazy"></div>
+      <div class="tag"><strong data-i="about_n"></strong><span data-i="about_n_lbl"></span></div>
     </div>
-    <div class="about-copy reveal">
-      <span class="label label-accent" data-i18n="about_tag"></span>
-      <h2 class="h-big" data-i18n="about_title"></h2>
-      <p data-i18n="about_text"></p>
+    <div class="about-copy rv">
+      <span class="label" data-i="about_tag"></span>
+      <h2 class="h-display" data-ih="about_title"></h2>
+      <p data-i="about_text"></p>
       <ul class="about-list">
-        <li><span class="idx">01</span><span data-i18n="about_p1"></span></li>
-        <li><span class="idx">02</span><span data-i18n="about_p2"></span></li>
-        <li><span class="idx">03</span><span data-i18n="about_p3"></span></li>
+        <li><span class="n">01</span><span data-i="about_1"></span></li>
+        <li><span class="n">02</span><span data-i="about_2"></span></li>
+        <li><span class="n">03</span><span data-i="about_3"></span></li>
       </ul>
-      <a href="#contacto" class="arrow-cta"><span data-i18n="about_cta2"></span> →</a>
+      <a href="#contacto" class="link-arrow"><span data-i="about_cta"></span> &rarr;</a>
     </div>
   </div>
 </section>
 
-<!-- ============ CASES — staggered gallery ============ -->
-<section class="cases" id="casos">
+<!-- ================= 3D CAROUSEL ================= -->
+<section class="sec cases" id="casos">
   <div class="container">
-    <div class="cases-head reveal">
-      <div>
-        <span class="label label-accent" data-i18n="cases_tag"></span>
-        <h2 class="h-huge" style="margin-top:16px" data-i18n="cases_title"></h2>
-      </div>
-      <a href="https://wa.me/18094882222" target="_blank" rel="noopener" class="arrow-cta"><span data-i18n="cases_cta"></span> →</a>
-    </div>
-    <div class="cases-grid">
-      <div class="case-item reveal">
-        <div class="img-wrap">
-          <img src="https://images.unsplash.com/photo-1485738422979-f5c462d49f74?q=80&w=1000&auto=format&fit=crop" alt="Estados Unidos" loading="lazy">        </div>
-        <div class="case-meta">
-          <span class="case-cat" data-i18n="case1_cat"></span>
-          <h3 class="case-title" data-i18n="case1_t"></h3>
-          <p class="case-tags" data-i18n="case1_tags"></p>
-          <a href="https://wa.me/18094882222" target="_blank" rel="noopener" class="case-btn" data-i18n="case_btn"></a>
-        </div>
-      </div>
-      <div class="case-item reveal">
-        <div class="img-wrap">
-          <img src="https://images.unsplash.com/photo-1517935706615-2717063c2225?q=80&w=1000&auto=format&fit=crop" alt="Canadá" loading="lazy">        </div>
-        <div class="case-meta">
-          <span class="case-cat" data-i18n="case2_cat"></span>
-          <h3 class="case-title" data-i18n="case2_t"></h3>
-          <p class="case-tags" data-i18n="case2_tags"></p>
-          <a href="https://wa.me/18094882222" target="_blank" rel="noopener" class="case-btn" data-i18n="case_btn"></a>
-        </div>
-      </div>
-      <div class="case-item reveal">
-        <div class="img-wrap">
-          <img src="https://images.unsplash.com/photo-1511895426328-dc8714191300?q=80&w=1000&auto=format&fit=crop" alt="Familia reunificada" loading="lazy">        </div>
-        <div class="case-meta">
-          <span class="case-cat" data-i18n="case3_cat"></span>
-          <h3 class="case-title" data-i18n="case3_t"></h3>
-          <p class="case-tags" data-i18n="case3_tags"></p>
-          <a href="https://wa.me/18094882222" target="_blank" rel="noopener" class="case-btn" data-i18n="case_btn"></a>
-        </div>
-      </div>
-      <div class="case-item reveal">
-        <div class="img-wrap">
-          <img src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?q=80&w=1000&auto=format&fit=crop" alt="Europa" loading="lazy">        </div>
-        <div class="case-meta">
-          <span class="case-cat" data-i18n="case4_cat"></span>
-          <h3 class="case-title" data-i18n="case4_t"></h3>
-          <p class="case-tags" data-i18n="case4_tags"></p>
-          <a href="https://wa.me/18094882222" target="_blank" rel="noopener" class="case-btn" data-i18n="case_btn"></a>
-        </div>
+    <div class="cases-head rv">
+      <div class="sec-head" style="margin-bottom:0">
+        <span class="label" data-i="cases_tag"></span>
+        <h2 class="h-display" data-ih="cases_title"></h2>
       </div>
     </div>
   </div>
+  <div class="stage" id="stage">
+    <div class="ring" id="ring"></div>
+  </div>
+  <p class="stage-hint" data-i="cases_hint"></p>
+  <div class="container cases-foot rv">
+    <a href="https://wa.me/18094882222" target="_blank" rel="noopener" class="btn btn-ink" data-i="cases_cta"></a>
+  </div>
 </section>
 
-<!-- ============ FAQ ============ -->
-<section class="faq" id="faq">
+<!-- ================= FAQ ================= -->
+<section class="sec faq" id="faq">
   <div class="container faq-grid">
-    <div class="faq-side reveal">
-      <span class="label label-accent" data-i18n="faq_tag"></span>
-      <h2 class="h-big" data-i18n="faq_title"></h2>
-      <p data-i18n="faq_sub"></p>
-      <a href="https://wa.me/18094882222" target="_blank" rel="noopener" class="arrow-cta"><span data-i18n="faq_cta"></span> →</a>
+    <div class="faq-side rv">
+      <span class="label" data-i="faq_tag"></span>
+      <h2 class="h-display" data-ih="faq_title"></h2>
+      <p data-i="faq_sub"></p>
+      <a href="https://wa.me/18094882222" target="_blank" rel="noopener" class="link-arrow"><span data-i="faq_cta"></span> &rarr;</a>
     </div>
-    <div class="reveal">
-      <details class="faq-item"><summary><span data-i18n="faq1_q"></span><span class="faq-plus">+</span></summary><div class="faq-body" data-i18n="faq1_a"></div></details>
-      <details class="faq-item"><summary><span data-i18n="faq2_q"></span><span class="faq-plus">+</span></summary><div class="faq-body" data-i18n="faq2_a"></div></details>
-      <details class="faq-item"><summary><span data-i18n="faq3_q"></span><span class="faq-plus">+</span></summary><div class="faq-body" data-i18n="faq3_a"></div></details>
-      <details class="faq-item"><summary><span data-i18n="faq4_q"></span><span class="faq-plus">+</span></summary><div class="faq-body" data-i18n="faq4_a"></div></details>
-      <details class="faq-item"><summary><span data-i18n="faq5_q"></span><span class="faq-plus">+</span></summary><div class="faq-body" data-i18n="faq5_a"></div></details>
+    <div class="rv">
+      <details class="fq"><summary><span data-i="q1"></span><span class="pl">+</span></summary><div class="fq-body" data-i="a1"></div></details>
+      <details class="fq"><summary><span data-i="q2"></span><span class="pl">+</span></summary><div class="fq-body" data-i="a2"></div></details>
+      <details class="fq"><summary><span data-i="q3"></span><span class="pl">+</span></summary><div class="fq-body" data-i="a3"></div></details>
+      <details class="fq"><summary><span data-i="q4"></span><span class="pl">+</span></summary><div class="fq-body" data-i="a4"></div></details>
+      <details class="fq"><summary><span data-i="q5"></span><span class="pl">+</span></summary><div class="fq-body" data-i="a5"></div></details>
     </div>
   </div>
 </section>
 
-<!-- ============ CONTACT — form + map ============ -->
-<section class="contact" id="contacto">
-  <div class="container contact-inner">
-    <div class="contact-head reveal">
-      <span class="label" data-i18n="contact_tag"></span>
-      <h2 data-i18n-html="contact_title"></h2>
-      <p class="contact-sub" data-i18n="contact_sub"></p>
+<!-- ================= CONTACT ================= -->
+<section class="sec contact" id="contacto">
+  <div class="container">
+    <div class="contact-head rv">
+      <span class="label" data-i="cont_tag"></span>
+      <h2 class="h-display" data-ih="cont_title"></h2>
+      <p class="lead" data-i="cont_sub"></p>
     </div>
     <div class="contact-grid">
-      <div class="form-card reveal">
-        <h3 data-i18n="form_title"></h3>
-        <p class="form-note" data-i18n="form_note"></p>
+      <div class="form-card rv">
+        <h3 data-i="form_title"></h3>
+        <p class="form-note" data-i="form_note"></p>
         <form id="waForm">
-          <div class="field">
-            <label for="f-name" data-i18n="form_name"></label>
-            <input id="f-name" type="text" required>
-          </div>
-          <div class="field">
-            <label for="f-phone" data-i18n="form_phone"></label>
-            <input id="f-phone" type="tel">
-          </div>
-          <div class="field">
-            <label for="f-service" data-i18n="form_service"></label>
-            <select id="f-service">
-              <option data-i18n="s1_t"></option>
-              <option data-i18n="s2_t"></option>
-              <option data-i18n="s3_t"></option>
-              <option data-i18n="s4_t"></option>
-              <option data-i18n="s5_t"></option>
-              <option data-i18n="s6_t"></option>
-              <option data-i18n="s7_t"></option>
-              <option data-i18n="s8_t"></option>
+          <div class="fld"><label for="f-name" data-i="f_name"></label><input id="f-name" type="text" required></div>
+          <div class="fld"><label for="f-phone" data-i="f_phone"></label><input id="f-phone" type="tel"></div>
+          <div class="fld"><label for="f-serv" data-i="f_serv"></label>
+            <select id="f-serv">
+              <option data-i="s1_t"></option><option data-i="s2_t"></option><option data-i="s3_t"></option><option data-i="s4_t"></option>
+              <option data-i="s5_t"></option><option data-i="s6_t"></option><option data-i="s7_t"></option><option data-i="s8_t"></option>
             </select>
           </div>
-          <div class="field">
-            <label for="f-msg" data-i18n="form_msg"></label>
-            <textarea id="f-msg"></textarea>
-          </div>
-          <button type="submit" class="btn-pill form-send"><span data-i18n="form_send"></span> →</button>
+          <div class="fld"><label for="f-msg" data-i="f_msg"></label><textarea id="f-msg"></textarea></div>
+          <button type="submit" class="btn btn-gold form-send"><span data-i="f_send"></span> &rarr;</button>
         </form>
       </div>
-      <div class="map-card reveal">
-        <iframe src="https://www.google.com/maps?q=ODY%20VISAS%2C%20Santo%20Domingo%2C%20Rep%C3%BAblica%20Dominicana&z=13&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="ODY VISAS — Google Maps"></iframe>
+      <div class="map-card rv">
+        <iframe src="https://www.google.com/maps?q=ODY%20VISAS%2C%20Santo%20Domingo%2C%20Rep%C3%BAblica%20Dominicana&z=13&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="ODY VISAS Google Maps"></iframe>
         <div class="map-foot">
-          <span class="label" data-i18n="map_label"></span>
+          <span class="label" data-i="map_lbl"></span>
           <span class="cities">Santo Domingo · Punta Cana · Hato Mayor</span>
         </div>
       </div>
     </div>
-    <div class="contact-data reveal">
-      <a href="tel:+18094882222">+1 (809) 488-2222</a>
-      <a href="mailto:odyvisas@gmail.com">odyvisas@gmail.com</a>
-      <a href="https://www.instagram.com/odyvisas" target="_blank" rel="noopener">@odyvisas</a>
-      <a href="https://www.facebook.com/odyvisas" target="_blank" rel="noopener">Facebook — ODY VISAS</a>
+    <div class="contact-data rv">
+      <a href="tel:+18094882222"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>+1 (809) 488-2222</a>
+      <a href="mailto:odyvisas@gmail.com"><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg>odyvisas@gmail.com</a>
+      <a href="https://www.instagram.com/odyvisas/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.6" cy="6.4" r="1.1" fill="currentColor" stroke="none"/></svg>@odyvisas</a>
     </div>
   </div>
 </section>
 
-<!-- ============ FOOTER ============ -->
+<!-- ================= FOOTER ================= -->
 <footer>
   <div class="container">
-    <div class="footer-grid">
+    <div class="f-grid">
       <div>
-        <a href="#" class="footer-brand">
+        <a href="#" class="f-brand">
           <img src="assets/logo.png" alt="ODY VISAS" onerror="this.style.display='none'">
-          <span>ODY<span style="color:var(--red)">·</span>VISAS</span>
+          <span>ODY<i>·</i>VISAS</span>
         </a>
-        <p class="footer-mission" data-i18n="footer_mission"></p>
-        <a href="https://www.instagram.com/odyvisas/" target="_blank" rel="noopener" class="footer-ig">
-          <span class="ig-icon"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.6" cy="6.4" r="1.2" fill="currentColor" stroke="none"/></svg></span>
-          <span>@odyvisas</span>
-        </a>
+        <p class="f-mission" data-i="f_mission"></p>
+        <div class="socials">
+          <a href="https://www.instagram.com/odyvisas/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.6" cy="6.4" r="1.1" fill="currentColor" stroke="none"/></svg></a>
+          <a href="https://www.facebook.com/odyvisas" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="https://www.threads.net/@odyvisas" target="_blank" rel="noopener" aria-label="Threads"><svg viewBox="0 0 24 24"><path d="M12 21c-5 0-8-3.4-8-9s3-9 8-9c3.6 0 6 1.8 7 4.4"/><path d="M9 14.4c0 1.4 1.2 2.3 2.7 2.3 2 0 3.4-1.2 3.4-4.6 0-2-1.2-3.1-3-3.1-2.4 0-3.6 1.6-3.6 1.6"/><path d="M15.1 12.1c1.9.2 3.2 1.2 3.2 3 0 2.2-2 3.9-5.1 3.9"/></svg></a>
+          <a href="https://wa.me/18094882222" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 0 1-12.6 7.3L3 20.5l1.8-5.2A8.5 8.5 0 1 1 21 11.5z"/></svg></a>
+        </div>
       </div>
-      <div class="footer-cols">
-        <div class="footer-col">
-          <h4 data-i18n="footer_nav"></h4>
-          <ul>
-            <li><a href="#servicios" data-i18n="nav_services"></a></li>
-            <li><a href="#casos" data-i18n="nav_cases"></a></li>
-            <li><a href="#faq" data-i18n="nav_faq"></a></li>
-            <li><a href="#contacto" data-i18n="nav_contact"></a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Social</h4>
-          <ul>
-            <li><a href="https://www.instagram.com/odyvisas" target="_blank" rel="noopener">Instagram</a></li>
-            <li><a href="https://www.facebook.com/odyvisas" target="_blank" rel="noopener">Facebook</a></li>
-            <li><a href="https://www.threads.net/@odyvisas" target="_blank" rel="noopener">Threads</a></li>
-            <li><a href="https://wa.me/18094882222" target="_blank" rel="noopener">WhatsApp</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4 data-i18n="footer_locations"></h4>
-          <ul>
-            <li>Santo Domingo</li>
-            <li>Punta Cana</li>
-            <li>Hato Mayor</li>
-            <li><a href="tel:+18094882222">+1 (809) 488-2222</a></li>
-            <li><a href="mailto:odyvisas@gmail.com">odyvisas@gmail.com</a></li>
-          </ul>
-        </div>
+      <div class="f-col">
+        <h4 data-i="f_nav"></h4>
+        <ul>
+          <li><a href="#destinos" data-i="nav_dest"></a></li>
+          <li><a href="#servicios" data-i="nav_serv"></a></li>
+          <li><a href="#nosotros" data-i="nav_about"></a></li>
+          <li><a href="#casos" data-i="nav_cases"></a></li>
+          <li><a href="#faq" data-i="nav_faq"></a></li>
+        </ul>
+      </div>
+      <div class="f-col">
+        <h4 data-i="f_offices"></h4>
+        <ul>
+          <li>Santo Domingo</li>
+          <li>Punta Cana</li>
+          <li>Hato Mayor</li>
+          <li><a href="tel:+18094882222">+1 (809) 488-2222</a></li>
+          <li><a href="mailto:odyvisas@gmail.com">odyvisas@gmail.com</a></li>
+        </ul>
+      </div>
+      <div class="f-col">
+        <h4 data-i="f_quick"></h4>
+        <p class="f-note" data-i="f_quick_note"></p>
+        <form class="quick" id="quickForm">
+          <input id="q-msg" type="text" data-ip="f_quick_ph" aria-label="WhatsApp">
+          <button type="submit" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></button>
+        </form>
       </div>
     </div>
-    <div class="footer-bottom">
-      <span data-i18n="footer_copy"></span>
-      <span data-i18n="footer_legal"></span>
+    <div class="f-bottom">
+      <span data-i="f_copy"></span>
+      <span data-i="f_rights"></span>
     </div>
   </div>
 </footer>
 
-<!-- Floating WhatsApp -->
 <a href="https://wa.me/18094882222" target="_blank" rel="noopener" class="float-wa" aria-label="WhatsApp">
   <svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.14-.14.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.68-1.62-.93-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.5 0 1.47 1.07 2.89 1.22 3.09.15.2 2.1 3.2 5.1 4.49.71.31 1.27.49 1.7.63.72.23 1.37.2 1.88.12.58-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.28-.2-.58-.35zM12.05 21.79h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.9-9.88a9.83 9.83 0 0 1 7 2.9 9.83 9.83 0 0 1 2.89 7c0 5.45-4.44 9.87-9.9 9.87zm8.42-18.29A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.9c0 2.1.55 4.14 1.59 5.95L.07 24l6.3-1.65a11.9 11.9 0 0 0 5.68 1.44h.01c6.55 0 11.89-5.34 11.89-11.9 0-3.18-1.24-6.16-3.48-8.4z"/></svg>
 </a>
 
 <script>
+/* ================= i18n ================= */
 const I18N = {
-  es: {
-    nav_services:"Servicios", nav_about:"Nosotros", nav_cases:"Casos", nav_testimonials:"Testimonios", nav_faq:"Preguntas", nav_contact:"Contacto",
-    nav_cta:"Agenda tu cita",
-    hero_tag:"Asesoría Migratoria y Consular",
-    hero_title:'Tu visa aprobada no es suerte, es <em>estrategia</em>',
-    hero_sub:"En ODY VISAS te acompañamos en todo el proceso migratorio hacia Estados Unidos, Canadá y Europa, con la experiencia de quienes ya han resuelto miles de casos, incluso los que otros dieron por perdidos.",
-    hero_cta1:"Agenda tu cita ahora",
-    hero_cta2:"Habla por WhatsApp",
-    hero_micro:"Santo Domingo · Punta Cana · Hato Mayor — +1 (809) 488-2222",
-    about_tag:"Sobre Nosotros",
-    about_title:"Expertos en trámites migratorios y consulares",
-    about_text:"ODY VISAS nace para simplificar algo que parece complicado: obtener tu visa. Ayudamos a dominicanos y latinos a resolver su situación migratoria hacia Estados Unidos, Canadá y Europa, con casos reales de personas que fueron rechazadas varias veces y hoy tienen su visa aprobada. Estamos más cerca de lo que piensas.",
-    about_badge_num:"Miles", about_badge_label:"de casos resueltos",
-    about_p1:"Oficinas físicas en Santo Domingo, Punta Cana y Hato Mayor",
-    about_p2:"Procesos hacia Estados Unidos, Canadá y Europa",
-    about_p3:"Acompañamiento personalizado de principio a fin",
-    about_cta:"Conoce nuestros servicios",
-    about_cta2:"Agenda tu consulta hoy",
-    services_tag:"Servicios",
-    services_title:"Nuestros servicios",
-    services_sub:"Soluciones migratorias para cada etapa de tu proceso",
-    s1_t:"Visa de Turismo (B1/B2)", s1_d:"Te preparamos para tu entrevista y evitamos los errores que causan negaciones.",
-    s2_t:"Visa de Trabajo", s2_d:"Asesoría completa para visas laborales en Estados Unidos y Canadá.",
-    s3_t:"Visa de Canadá", s3_d:"Te explicamos los requisitos reales, incluyendo procesos sin entrevista cuando aplica.",
-    s4_t:"Peticiones Familiares", s4_d:"Reunifica a tu familia con el proceso correcto y sin demoras innecesarias.",
-    s5_t:"Casos de Visa Negada", s5_d:"Si ya te negaron la visa, no todo está perdido. Analizamos tu caso y creamos una nueva estrategia.",
-    s6_t:"Trámite de Pasaportes", s6_d:"Gestionamos tu pasaporte de forma rápida y segura.",
-    s7_t:"Visa de Negocios / Inversionista", s7_d:"Acompañamiento para quienes buscan abrir o expandir negocios en el extranjero.",
-    s8_t:"Consulta Migratoria en Vivo", s8_d:"Habla directamente con un asesor y resuelve tus dudas al momento.",
-    services_cta_tag:"¿Listo para empezar?",
-    services_cta:"Agenda tu consulta",
-    cases_tag:"Casos de éxito",
-    cases_title:"Destinos que hacemos posibles",
-    cases_cta:"Quiero mi caso resuelto",
-    case_btn:"Consultar mi caso",
-    case1_cat:"Estados Unidos", case1_t:"Visa aprobada tras 4 negaciones", case1_tags:"B1/B2 · Estrategia · Entrevista",
-    case2_cat:"Canadá", case2_t:"Visa de trabajo sin complicaciones", case2_tags:"Trabajo · Sin entrevista · Requisitos reales",
-    case3_cat:"Peticiones familiares", case3_t:"Familias reunificadas a tiempo", case3_tags:"Familia · Proceso correcto · Sin demoras",
-    case4_cat:"Europa", case4_t:"Negocios e inversión en el extranjero", case4_tags:"Inversionista · Negocios · Expansión",
-    faq_tag:"Preguntas frecuentes",
-    faq_title:"Resolvemos tus dudas",
-    faq_sub:"Las respuestas a las preguntas que más recibimos. ¿Tienes otra? Escríbenos por WhatsApp y te respondemos al momento.",
-    faq_cta:"Hacer otra pregunta",
-    faq1_q:"¿Dónde tienen oficinas ODY VISAS?",
-    faq1_a:"Contamos con oficinas en Santo Domingo, Punta Cana y Hato Mayor para atenderte de forma presencial.",
-    faq2_q:"¿Qué pasa si ya me negaron la visa antes?",
-    faq2_a:"Analizamos tu caso específico y armamos una nueva estrategia; muchos de nuestros clientes fueron aprobados después de varias negaciones.",
-    faq3_q:"¿La visa de turismo me permite trabajar o abrir un negocio?",
-    faq3_a:"No. Te explicamos exactamente qué sí y qué no puedes hacer con cada tipo de visa para evitar problemas legales.",
-    faq4_q:"¿Puedo obtener visa de Canadá sin tener visa de Estados Unidos?",
-    faq4_a:"Sí, es posible. Te explicamos los requisitos según tu caso particular.",
-    faq5_q:"¿Cómo agendo una consulta?",
-    faq5_a:"Puedes escribirnos por WhatsApp al 809-488-2222, llamarnos o llenar el formulario de contacto.",
-    contact_tag:"Contacto",
-    contact_title:'Da el primer paso hacia tu visa <em>aprobada</em>',
-    contact_sub:"Agenda tu cita hoy mismo y deja de posponer tus planes.",
-    form_title:"Cuéntanos tu caso",
-    form_note:"Al enviar, se abre WhatsApp con tu mensaje listo para nuestro equipo: +1 (809) 488-2222.",
-    form_name:"Nombre completo",
-    form_phone:"Teléfono / WhatsApp",
-    form_service:"Servicio de interés",
-    form_msg:"Cuéntanos brevemente tu situación",
-    form_send:"Enviar por WhatsApp",
-    map_label:"Nuestras oficinas",
-    footer_mission:"Asesoría migratoria y consular con oficinas en Santo Domingo, Punta Cana y Hato Mayor. Tu visa aprobada no es cuestión de suerte, es cuestión de estrategia.",
-    footer_nav:"Navegación",
-    footer_locations:"Oficinas",
-    footer_copy:"ODY VISAS © 2026 — Servicios Migratorios en General.",
-    footer_legal:"Todos los derechos reservados."
-  },
-  en: {
-    nav_services:"Services", nav_about:"About", nav_cases:"Cases", nav_testimonials:"Testimonials", nav_faq:"FAQ", nav_contact:"Contact",
-    nav_cta:"Book appointment",
-    hero_tag:"Immigration & Consular Advisory",
-    hero_title:'Your approved visa is not luck, it\'s <em>strategy</em>',
-    hero_sub:"At ODY VISAS we guide you through the entire immigration process to the United States, Canada and Europe, with the experience of a team that has resolved thousands of cases — even the ones others gave up on.",
-    hero_cta1:"Book your appointment now",
-    hero_cta2:"Chat on WhatsApp",
-    hero_micro:"Santo Domingo · Punta Cana · Hato Mayor — +1 (809) 488-2222",
-    about_tag:"About Us",
-    about_title:"Experts in immigration and consular procedures",
-    about_text:"ODY VISAS was born to simplify something that seems complicated: getting your visa. We help Dominicans and Latinos resolve their immigration situation for the United States, Canada and Europe, with real cases of people who were rejected several times and today have their visa approved. We are closer than you think.",
-    about_badge_num:"Thousands", about_badge_label:"of cases resolved",
-    about_p1:"Physical offices in Santo Domingo, Punta Cana and Hato Mayor",
-    about_p2:"Processes for the United States, Canada and Europe",
-    about_p3:"Personalized guidance from start to finish",
-    about_cta:"Discover our services",
-    about_cta2:"Book your consultation today",
-    services_tag:"Services",
-    services_title:"Our services",
-    services_sub:"Immigration solutions for every stage of your process",
-    s1_t:"Tourist Visa (B1/B2)", s1_d:"We prepare you for your interview and help you avoid the mistakes that cause denials.",
-    s2_t:"Work Visa", s2_d:"Complete advisory for work visas in the United States and Canada.",
-    s3_t:"Canada Visa", s3_d:"We explain the real requirements, including interview-free processes when applicable.",
-    s4_t:"Family Petitions", s4_d:"Reunite your family with the right process and no unnecessary delays.",
-    s5_t:"Denied Visa Cases", s5_d:"If your visa was already denied, all is not lost. We analyze your case and build a new strategy.",
-    s6_t:"Passport Processing", s6_d:"We process your passport quickly and safely.",
-    s7_t:"Business / Investor Visa", s7_d:"Guidance for those looking to open or expand businesses abroad.",
-    s8_t:"Live Immigration Consultation", s8_d:"Talk directly with an advisor and get your questions answered on the spot.",
-    services_cta_tag:"Ready to start?",
-    services_cta:"Book your consultation",
-    cases_tag:"Success stories",
-    cases_title:"Destinations we make possible",
-    cases_cta:"I want my case resolved",
-    case_btn:"Ask about my case",
-    case1_cat:"United States", case1_t:"Visa approved after 4 denials", case1_tags:"B1/B2 · Strategy · Interview",
-    case2_cat:"Canada", case2_t:"Work visa without complications", case2_tags:"Work · No interview · Real requirements",
-    case3_cat:"Family petitions", case3_t:"Families reunited on time", case3_tags:"Family · Right process · No delays",
-    case4_cat:"Europe", case4_t:"Business and investment abroad", case4_tags:"Investor · Business · Expansion",
-    faq_tag:"FAQ",
-    faq_title:"We answer your questions",
-    faq_sub:"Answers to the questions we get the most. Have another one? Message us on WhatsApp and we'll reply right away.",
-    faq_cta:"Ask another question",
-    faq1_q:"Where does ODY VISAS have offices?",
-    faq1_a:"We have offices in Santo Domingo, Punta Cana and Hato Mayor to assist you in person.",
-    faq2_q:"What if my visa was already denied before?",
-    faq2_a:"We analyze your specific case and build a new strategy; many of our clients were approved after several denials.",
-    faq3_q:"Does a tourist visa allow me to work or open a business?",
-    faq3_a:"No. We explain exactly what you can and cannot do with each type of visa to avoid legal problems.",
-    faq4_q:"Can I get a Canadian visa without having a U.S. visa?",
-    faq4_a:"Yes, it's possible. We explain the requirements based on your particular case.",
-    faq5_q:"How do I book a consultation?",
-    faq5_a:"You can message us on WhatsApp at 809-488-2222, call us, or fill out the contact form.",
-    contact_tag:"Contact",
-    contact_title:'Take the first step toward your <em>approved</em> visa',
-    contact_sub:"Book your appointment today and stop postponing your plans.",
-    form_title:"Tell us about your case",
-    form_note:"When you submit, WhatsApp opens with your message ready for our team: +1 (809) 488-2222.",
-    form_name:"Full name",
-    form_phone:"Phone / WhatsApp",
-    form_service:"Service of interest",
-    form_msg:"Briefly tell us your situation",
-    form_send:"Send via WhatsApp",
-    map_label:"Our offices",
-    footer_mission:"Immigration and consular advisory with offices in Santo Domingo, Punta Cana and Hato Mayor. Your approved visa is not a matter of luck, it's a matter of strategy.",
-    footer_nav:"Navigation",
-    footer_locations:"Offices",
-    footer_copy:"ODY VISAS © 2026 — General Immigration Services.",
-    footer_legal:"All rights reserved."
-  }
-};
+es:{
+  nav_dest:"Destinos", nav_serv:"Servicios", nav_about:"Nosotros", nav_cases:"Casos", nav_faq:"Preguntas", nav_contact:"Contacto", nav_cta:"Agenda tu cita",
+  hero_l1:"Tu visa aprobada", hero_l2:"no es suerte, es <em>estrategia</em>",
+  hero_hint:"Desliza para descubrir",
+  hero_tag:"Asesoría Migratoria y Consular",
+  hero_final:"Miles de casos aprobados, incluso los que otros dieron por <em>perdidos</em>",
+  hero_sub:"En ODY VISAS te acompañamos en todo el proceso migratorio hacia Estados Unidos, Canadá y Europa, con la experiencia de quienes ya han resuelto miles de casos.",
+  hero_cta1:"Agenda tu cita ahora", hero_cta2:"Hablar por WhatsApp",
+  hero_micro:"Santo Domingo · Punta Cana · Hato Mayor · +1 (809) 488-2222",
+  dest_tag:"Destinos", dest_title:"Un solo equipo, <em>tres continentes</em>",
+  dest_sub:"Cada proceso migratorio se conecta con un asesor que conoce el consulado, los requisitos reales y los errores que causan negaciones.",
+  core_sub:"Asesoría migratoria", live_txt:"Asesores en línea ahora",
+  d1_t:"Estados Unidos", d1_s:"Turismo · Trabajo · Negocios",
+  d2_t:"Canadá", d2_s:"Trabajo · Estudio · Residencia",
+  d3_t:"Europa", d3_s:"Schengen · Inversión",
+  d4_t:"Reunificación", d4_s:"Peticiones familiares",
+  serv_tag:"Servicios", serv_title:"Soluciones para cada <em>etapa</em>",
+  serv_sub:"Desde la primera solicitud hasta los casos que ya fueron negados, cada trámite recibe una estrategia propia.",
+  s1_t:"Visa de Turismo (B1/B2)", s1_d:"Te preparamos para tu entrevista y evitamos los errores que causan negaciones.",
+  s2_t:"Visa de Trabajo", s2_d:"Asesoría completa para visas laborales en Estados Unidos y Canadá.",
+  s3_t:"Visa de Canadá", s3_d:"Te explicamos los requisitos reales, incluyendo procesos sin entrevista cuando aplica.",
+  s4_t:"Peticiones Familiares", s4_d:"Reunifica a tu familia con el proceso correcto y sin demoras innecesarias.",
+  s5_t:"Casos de Visa Negada", s5_d:"Si ya te negaron la visa, no todo está perdido. Analizamos tu caso y creamos una nueva estrategia.",
+  s6_t:"Trámite de Pasaportes", s6_d:"Gestionamos tu pasaporte de forma rápida y segura.",
+  s7_t:"Negocios e Inversionista", s7_d:"Acompañamiento para quienes buscan abrir o expandir negocios en el extranjero.",
+  s8_t:"Consulta Migratoria en Vivo", s8_d:"Habla directamente con un asesor y resuelve tus dudas al momento.",
+  serv_cta_tag:"¿Listo para empezar?", serv_cta:"Tu caso merece una estrategia propia", serv_cta_link:"Agenda tu consulta",
+  about_tag:"Sobre Nosotros", about_title:"Expertos en trámites <em>migratorios</em> y consulares",
+  about_text:"ODY VISAS nace para simplificar algo que parece complicado: obtener tu visa. Ayudamos a dominicanos y latinos a resolver su situación migratoria hacia Estados Unidos, Canadá y Europa, con casos reales de personas que fueron rechazadas varias veces y hoy tienen su visa aprobada. Estamos más cerca de lo que piensas.",
+  about_n:"Miles", about_n_lbl:"de casos resueltos",
+  about_1:"Oficinas físicas en Santo Domingo, Punta Cana y Hato Mayor",
+  about_2:"Procesos hacia Estados Unidos, Canadá y Europa",
+  about_3:"Atención personalizada, no eres un número más",
+  about_cta:"Agenda tu consulta hoy",
+  cases_tag:"Casos de éxito", cases_title:"Destinos que hacemos <em>posibles</em>",
+  cases_hint:"Arrastra para girar",
+  cases_cta:"Quiero mi caso resuelto",
+  c1:"Nueva York", c1s:"Visa B1/B2 aprobada",
+  c2:"Toronto", c2s:"Visa de trabajo",
+  c3:"París", c3s:"Schengen",
+  c4:"Miami", c4s:"Negocios",
+  c5:"Vancouver", c5s:"Residencia",
+  c6:"Madrid", c6s:"Reunificación",
+  c7:"Londres", c7s:"Estudio",
+  c8:"Roma", c8s:"Turismo",
+  faq_tag:"Preguntas frecuentes", faq_title:"Resolvemos tus <em>dudas</em>",
+  faq_sub:"Las respuestas a las preguntas que más recibimos. Si tienes otra, escríbenos por WhatsApp y te respondemos al momento.",
+  faq_cta:"Hacer otra pregunta",
+  q1:"¿Dónde tienen oficinas ODY VISAS?", a1:"Contamos con oficinas en Santo Domingo, Punta Cana y Hato Mayor para atenderte de forma presencial.",
+  q2:"¿Qué pasa si ya me negaron la visa antes?", a2:"Analizamos tu caso específico y armamos una nueva estrategia. Muchos de nuestros clientes fueron aprobados después de varias negaciones.",
+  q3:"¿La visa de turismo me permite trabajar o abrir un negocio?", a3:"No. Te explicamos exactamente qué sí y qué no puedes hacer con cada tipo de visa para evitar problemas legales.",
+  q4:"¿Puedo obtener visa de Canadá sin tener visa de Estados Unidos?", a4:"Sí, es posible. Te explicamos los requisitos según tu caso particular.",
+  q5:"¿Cómo agendo una consulta?", a5:"Puedes escribirnos por WhatsApp al 809-488-2222, llamarnos o llenar el formulario de contacto.",
+  cont_tag:"Contacto", cont_title:"Da el primer paso hacia tu visa <em>aprobada</em>",
+  cont_sub:"Agenda tu cita hoy mismo y deja de posponer tus planes.",
+  form_title:"Cuéntanos tu caso", form_note:"Al enviar se abre WhatsApp con tu mensaje listo para nuestro equipo: +1 (809) 488-2222.",
+  f_name:"Nombre completo", f_phone:"Teléfono / WhatsApp", f_serv:"Servicio de interés", f_msg:"Cuéntanos brevemente tu situación", f_send:"Enviar por WhatsApp",
+  map_lbl:"Nuestras oficinas",
+  f_mission:"Asesoría migratoria y consular con oficinas en Santo Domingo, Punta Cana y Hato Mayor. Tu visa aprobada no es cuestión de suerte, es cuestión de estrategia.",
+  f_nav:"Navegación", f_offices:"Oficinas", f_quick:"Consulta rápida",
+  f_quick_note:"Escribe tu duda y te respondemos por WhatsApp.",
+  f_quick_ph:"Tu pregunta...",
+  f_copy:"ODY VISAS © 2026 · Servicios Migratorios en General.", f_rights:"Todos los derechos reservados."
+},
+en:{
+  nav_dest:"Destinations", nav_serv:"Services", nav_about:"About", nav_cases:"Cases", nav_faq:"FAQ", nav_contact:"Contact", nav_cta:"Book appointment",
+  hero_l1:"Your approved visa", hero_l2:"is not luck, it is <em>strategy</em>",
+  hero_hint:"Scroll to discover",
+  hero_tag:"Immigration and Consular Advisory",
+  hero_final:"Thousands of approved cases, even the ones others gave up as <em>lost</em>",
+  hero_sub:"At ODY VISAS we guide you through the entire immigration process to the United States, Canada and Europe, with the experience of a team that has resolved thousands of cases.",
+  hero_cta1:"Book your appointment", hero_cta2:"Chat on WhatsApp",
+  hero_micro:"Santo Domingo · Punta Cana · Hato Mayor · +1 (809) 488-2222",
+  dest_tag:"Destinations", dest_title:"One team, <em>three continents</em>",
+  dest_sub:"Every immigration process connects to an advisor who knows the consulate, the real requirements and the mistakes that cause denials.",
+  core_sub:"Immigration advisory", live_txt:"Advisors online now",
+  d1_t:"United States", d1_s:"Tourism · Work · Business",
+  d2_t:"Canada", d2_s:"Work · Study · Residency",
+  d3_t:"Europe", d3_s:"Schengen · Investment",
+  d4_t:"Reunification", d4_s:"Family petitions",
+  serv_tag:"Services", serv_title:"Solutions for every <em>stage</em>",
+  serv_sub:"From the first application to cases that were already denied, every process gets its own strategy.",
+  s1_t:"Tourist Visa (B1/B2)", s1_d:"We prepare you for your interview and help you avoid the mistakes that cause denials.",
+  s2_t:"Work Visa", s2_d:"Complete advisory for work visas in the United States and Canada.",
+  s3_t:"Canada Visa", s3_d:"We explain the real requirements, including interview free processes when applicable.",
+  s4_t:"Family Petitions", s4_d:"Reunite your family with the right process and no unnecessary delays.",
+  s5_t:"Denied Visa Cases", s5_d:"If your visa was already denied, all is not lost. We analyze your case and build a new strategy.",
+  s6_t:"Passport Processing", s6_d:"We process your passport quickly and safely.",
+  s7_t:"Business and Investor", s7_d:"Guidance for those looking to open or expand businesses abroad.",
+  s8_t:"Live Immigration Consultation", s8_d:"Talk directly with an advisor and get your questions answered on the spot.",
+  serv_cta_tag:"Ready to start?", serv_cta:"Your case deserves its own strategy", serv_cta_link:"Book your consultation",
+  about_tag:"About Us", about_title:"Experts in <em>immigration</em> and consular procedures",
+  about_text:"ODY VISAS was born to simplify something that seems complicated: getting your visa. We help Dominicans and Latinos resolve their immigration situation for the United States, Canada and Europe, with real cases of people who were rejected several times and today have their visa approved. We are closer than you think.",
+  about_n:"Thousands", about_n_lbl:"of cases resolved",
+  about_1:"Physical offices in Santo Domingo, Punta Cana and Hato Mayor",
+  about_2:"Processes for the United States, Canada and Europe",
+  about_3:"Personalized attention, you are not just another number",
+  about_cta:"Book your consultation today",
+  cases_tag:"Success stories", cases_title:"Destinations we make <em>possible</em>",
+  cases_hint:"Drag to rotate",
+  cases_cta:"I want my case resolved",
+  c1:"New York", c1s:"B1/B2 visa approved",
+  c2:"Toronto", c2s:"Work visa",
+  c3:"Paris", c3s:"Schengen",
+  c4:"Miami", c4s:"Business",
+  c5:"Vancouver", c5s:"Residency",
+  c6:"Madrid", c6s:"Reunification",
+  c7:"London", c7s:"Study",
+  c8:"Rome", c8s:"Tourism",
+  faq_tag:"FAQ", faq_title:"We answer your <em>questions</em>",
+  faq_sub:"Answers to the questions we get the most. If you have another one, message us on WhatsApp and we reply right away.",
+  faq_cta:"Ask another question",
+  q1:"Where does ODY VISAS have offices?", a1:"We have offices in Santo Domingo, Punta Cana and Hato Mayor to assist you in person.",
+  q2:"What if my visa was already denied before?", a2:"We analyze your specific case and build a new strategy. Many of our clients were approved after several denials.",
+  q3:"Does a tourist visa allow me to work or open a business?", a3:"No. We explain exactly what you can and cannot do with each type of visa to avoid legal problems.",
+  q4:"Can I get a Canadian visa without having a U.S. visa?", a4:"Yes, it is possible. We explain the requirements based on your particular case.",
+  q5:"How do I book a consultation?", a5:"You can message us on WhatsApp at 809-488-2222, call us, or fill out the contact form.",
+  cont_tag:"Contact", cont_title:"Take the first step toward your <em>approved</em> visa",
+  cont_sub:"Book your appointment today and stop postponing your plans.",
+  form_title:"Tell us about your case", form_note:"When you submit, WhatsApp opens with your message ready for our team: +1 (809) 488-2222.",
+  f_name:"Full name", f_phone:"Phone / WhatsApp", f_serv:"Service of interest", f_msg:"Briefly tell us your situation", f_send:"Send via WhatsApp",
+  map_lbl:"Our offices",
+  f_mission:"Immigration and consular advisory with offices in Santo Domingo, Punta Cana and Hato Mayor. Your approved visa is not a matter of luck, it is a matter of strategy.",
+  f_nav:"Navigation", f_offices:"Offices", f_quick:"Quick question",
+  f_quick_note:"Write your question and we reply on WhatsApp.",
+  f_quick_ph:"Your question...",
+  f_copy:"ODY VISAS © 2026 · General Immigration Services.", f_rights:"All rights reserved."
+}};
 
-let currentLang = 'es';
-function setLang(lang){
-  currentLang = lang;
-  document.documentElement.lang = lang;
-  localStorage.setItem('ody-lang', lang);
-  document.getElementById('lang-es').classList.toggle('active', lang==='es');
-  document.getElementById('lang-en').classList.toggle('active', lang==='en');
-  const dict = I18N[lang];
-  document.querySelectorAll('[data-i18n]').forEach(el=>{ const k=el.getAttribute('data-i18n'); if(dict[k]!==undefined) el.textContent=dict[k]; });
-  document.querySelectorAll('[data-i18n-html]').forEach(el=>{ const k=el.getAttribute('data-i18n-html'); if(dict[k]!==undefined) el.innerHTML=dict[k]; });
-  document.title = lang==='es'
-    ? 'ODY VISAS — Asesoría Migratoria y Consular | Santo Domingo, Punta Cana, Hato Mayor'
-    : 'ODY VISAS — Immigration & Consular Advisory | Santo Domingo, Punta Cana, Hato Mayor';
+let LANG='es';
+function setLang(l){
+  LANG=l; document.documentElement.lang=l; localStorage.setItem('ody-lang',l);
+  document.getElementById('l-es').classList.toggle('active',l==='es');
+  document.getElementById('l-en').classList.toggle('active',l==='en');
+  const d=I18N[l];
+  document.querySelectorAll('[data-i]').forEach(e=>{const k=e.getAttribute('data-i'); if(d[k]!==undefined) e.textContent=d[k];});
+  document.querySelectorAll('[data-ih]').forEach(e=>{const k=e.getAttribute('data-ih'); if(d[k]!==undefined) e.innerHTML=d[k];});
+  document.querySelectorAll('[data-ip]').forEach(e=>{const k=e.getAttribute('data-ip'); if(d[k]!==undefined) e.placeholder=d[k];});
+  document.title = l==='es'
+    ? 'ODY VISAS · Asesoría Migratoria y Consular | Santo Domingo, Punta Cana, Hato Mayor'
+    : 'ODY VISAS · Immigration and Consular Advisory | Santo Domingo, Punta Cana, Hato Mayor';
+  buildRing();
 }
-setLang(localStorage.getItem('ody-lang') || 'es');
 
-// mobile menu
-const mm = document.getElementById('mobileMenu');
-document.getElementById('hamburger').addEventListener('click', ()=> mm.classList.toggle('open'));
-mm.querySelectorAll('a').forEach(a=> a.addEventListener('click', ()=> mm.classList.remove('open')));
+/* ================= nav ================= */
+const mob=document.getElementById('mob');
+document.getElementById('burger').addEventListener('click',()=>mob.classList.toggle('open'));
+mob.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>mob.classList.remove('open')));
 
-// reveal-up on scroll (the one scroll effect kept)
-const io = new IntersectionObserver(entries=>{
-  entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('active'); io.unobserve(e.target); } });
-},{threshold:0.15});
-document.querySelectorAll('.reveal').forEach(el=> io.observe(el));
-
-// duplicate marquee content for a seamless loop
-const mq = document.getElementById('marqueeTrack');
-mq.innerHTML += mq.innerHTML;
-
-// ===== Contact form → WhatsApp =====
-document.getElementById('waForm').addEventListener('submit', function(e){
-  e.preventDefault();
-  const name = document.getElementById('f-name').value.trim();
-  const phone = document.getElementById('f-phone').value.trim();
-  const service = document.getElementById('f-service').value;
-  const msg = document.getElementById('f-msg').value.trim();
-  let text;
-  if(currentLang === 'es'){
-    text = `Hola ODY VISAS. Soy ${name}.` +
-      `\nServicio de interés: ${service}.` +
-      (msg ? `\nMi caso: ${msg}` : '') +
-      (phone ? `\nMi teléfono: ${phone}` : '');
-  } else {
-    text = `Hello ODY VISAS. I'm ${name}.` +
-      `\nService of interest: ${service}.` +
-      (msg ? `\nMy case: ${msg}` : '') +
-      (phone ? `\nMy phone: ${phone}` : '');
+/* ================= reveal ================= */
+const io=new IntersectionObserver(es=>{es.forEach(e=>{
+  if(e.isIntersecting){
+    e.target.classList.add('on');
+    io.unobserve(e.target);
+    // node cards settle after their reveal transition, so redraw the curves then
+    if(e.target.closest('#nodes')) setTimeout(drawLines,980);
   }
-  window.open('https://wa.me/18094882222?text=' + encodeURIComponent(text), '_blank');
+})},{threshold:.12});
+document.querySelectorAll('.rv').forEach(e=>io.observe(e));
+
+/* ================= marquee loop ================= */
+const mqt=document.getElementById('mqTrack'); mqt.innerHTML+=mqt.innerHTML;
+
+/* ================= HERO scroll expansion ================= */
+const wrap=document.getElementById('heroWrapRef')||document.querySelector('.hero-wrap');
+const media=document.getElementById('heroMedia');
+const vid=document.getElementById('heroVideo');
+const bg=document.getElementById('heroBg');
+const shade=document.getElementById('heroShade');
+const veil=document.getElementById('heroVeil');
+const title=document.getElementById('heroTitle');
+const ln1=document.getElementById('ln1'), ln2=document.getElementById('ln2');
+const hint=document.getElementById('heroHint');
+const final=document.getElementById('heroFinal');
+
+// pick a lighter video file on small screens
+const VID_HD='https://videos.pexels.com/video-files/4115459/4115459-hd_1920_1080_30fps.mp4';
+const VID_SD='https://videos.pexels.com/video-files/4115459/4115459-sd_960_540_30fps.mp4';
+vid.src = window.innerWidth<900 ? VID_SD : VID_HD;
+vid.play().catch(()=>{});
+
+let ticking=false;
+function heroFrame(){
+  ticking=false;
+  const vh=window.innerHeight;
+  const total=wrap.offsetHeight-vh;
+  const p=Math.min(Math.max(-wrap.getBoundingClientRect().top/total,0),1);
+  const mobile=window.innerWidth<860;
+
+  // media grows from a card to full bleed
+  const w0=mobile?260:340, h0=mobile?340:440;
+  const w=w0+p*(window.innerWidth-w0);
+  const h=h0+p*(vh-h0);
+  media.style.width=w+'px';
+  media.style.height=h+'px';
+  media.style.borderRadius=(26-26*p)+'px';
+  // soft gold glow while it is a card, flattening out as it fills the screen
+  media.style.boxShadow=`0 ${34-34*p}px ${90-90*p}px rgba(20,38,77,${.22-.22*p}), 0 0 ${100-100*p}px rgba(240,165,0,${.32-.32*p})`;
+  // frosted at rest so the navy headline reads over it, then the video gains depth as it expands
+  veil.style.opacity=Math.max(0,.6-p*1.7).toFixed(3);
+  shade.style.opacity=Math.min(.8,p*.95).toFixed(3);
+  bg.style.opacity=(1-p*1.2).toFixed(3);
+
+  // title splits apart then fades out before the video goes dark
+  const shift=p*(mobile?46:34);
+  ln1.style.transform=`translateX(-${shift}vw)`;
+  ln2.style.transform=`translateX(${shift}vw)`;
+  title.style.opacity=(1-Math.max(0,(p-.22)/.24)).toFixed(3);
+  hint.style.opacity=(1-p*3).toFixed(3);
+
+  // final copy fades in over the fullscreen video
+  final.classList.toggle('show',p>.82);
+}
+function onScroll(){ if(!ticking){ticking=true;requestAnimationFrame(heroFrame);} }
+window.addEventListener('scroll',onScroll,{passive:true});
+window.addEventListener('resize',()=>{heroFrame();drawLines();buildRing();});
+
+/* ================= NEURAL LINES ================= */
+const svg=document.getElementById('nodeSvg');
+const core=document.getElementById('core');
+const nodesBox=document.getElementById('nodes');
+function drawLines(){
+  if(!svg||window.innerWidth<=860) return;
+  const box=nodesBox.getBoundingClientRect();
+  svg.setAttribute('viewBox',`0 0 ${box.width} ${box.height}`);
+  [...svg.querySelectorAll('path')].forEach(p=>p.remove());
+  const c=core.getBoundingClientRect();
+  const cx=c.left-box.left+c.width/2, cy=c.top-box.top+c.height/2;
+  document.querySelectorAll('[data-sat]').forEach(s=>{
+    const r=s.getBoundingClientRect();
+    const sx=r.left-box.left+(r.left<c.left?r.width:0), sy=r.top-box.top+r.height/2;
+    const mx=(sx+cx)/2;
+    const d=`M ${sx} ${sy} C ${mx} ${sy}, ${mx} ${cy}, ${cx} ${cy}`;
+    const p1=document.createElementNS('http://www.w3.org/2000/svg','path');
+    p1.setAttribute('d',d); p1.setAttribute('class','node-line');
+    const p2=document.createElementNS('http://www.w3.org/2000/svg','path');
+    p2.setAttribute('d',d); p2.setAttribute('class','node-flow');
+    svg.appendChild(p1); svg.appendChild(p2);
+  });
+}
+
+/* ================= 3D CAROUSEL ================= */
+const CASES=[
+  {img:'https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?q=80&w=520&auto=format&fit=crop',t:'c1',s:'c1s'},
+  {img:'https://images.unsplash.com/photo-1517935706615-2717063c2225?q=80&w=520&auto=format&fit=crop',t:'c2',s:'c2s'},
+  {img:'https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=80&w=520&auto=format&fit=crop',t:'c3',s:'c3s'},
+  {img:'https://images.unsplash.com/photo-1449034446853-66c86144b0ad?q=80&w=520&auto=format&fit=crop',t:'c4',s:'c4s'},
+  {img:'https://images.unsplash.com/photo-1519677100203-a0e668c92439?q=80&w=520&auto=format&fit=crop',t:'c5',s:'c5s'},
+  {img:'https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?q=80&w=520&auto=format&fit=crop',t:'c6',s:'c6s'},
+  {img:'https://images.unsplash.com/photo-1520175480921-4edfa2983e0f?q=80&w=520&auto=format&fit=crop',t:'c7',s:'c7s'},
+  {img:'https://images.unsplash.com/photo-1500916434205-0c77489c6cf7?q=80&w=520&auto=format&fit=crop',t:'c8',s:'c8s'}
+];
+const ring=document.getElementById('ring');
+let faceW,faceH,radius;
+function buildRing(){
+  const mobile=window.innerWidth<860;
+  faceW=mobile?170:230; faceH=mobile?230:310;
+  const n=CASES.length;
+  radius=Math.round((faceW*1.62)/(2*Math.tan(Math.PI/n)));
+  ring.innerHTML='';
+  CASES.forEach((c,i)=>{
+    const el=document.createElement('div');
+    el.className='face';
+    el.style.width=faceW+'px'; el.style.height=faceH+'px';
+    el.style.marginLeft=(-faceW/2)+'px'; el.style.marginTop=(-faceH/2)+'px';
+    el.style.transform=`rotateY(${i*(360/n)}deg) translateZ(${radius}px)`;
+    el.innerHTML=`<img src="${c.img}" alt="" loading="lazy" draggable="false">
+      <div class="fcap"><b>${I18N[LANG][c.t]}</b><i>${I18N[LANG][c.s]}</i></div>`;
+    ring.appendChild(el);
+  });
+}
+let rot=0,vel=.06,drag=false,lastX=0;
+const stage=document.getElementById('stage');
+function pointerDown(x){drag=true;lastX=x;vel=0;}
+function pointerMove(x){ if(!drag)return; const dx=x-lastX; lastX=x; rot+=dx*.28; vel=dx*.06; }
+function pointerUp(){drag=false;}
+stage.addEventListener('mousedown',e=>{e.preventDefault();pointerDown(e.clientX);});
+window.addEventListener('mousemove',e=>pointerMove(e.clientX));
+window.addEventListener('mouseup',pointerUp);
+stage.addEventListener('touchstart',e=>pointerDown(e.touches[0].clientX),{passive:true});
+stage.addEventListener('touchmove',e=>pointerMove(e.touches[0].clientX),{passive:true});
+stage.addEventListener('touchend',pointerUp);
+let ringVisible=true;
+new IntersectionObserver(es=>{ringVisible=es[0].isIntersecting;},{threshold:0}).observe(stage);
+(function spin(){
+  if(ringVisible){
+    if(!drag){ vel+= (0.06-vel)*0.02; rot+=vel; vel*=0.96; if(Math.abs(vel)<0.06) vel=0.06; }
+    ring.style.transform=`translateZ(-${radius}px) rotateY(${rot}deg)`;
+  }
+  requestAnimationFrame(spin);
+})();
+
+/* ================= forms ================= */
+document.getElementById('waForm').addEventListener('submit',e=>{
+  e.preventDefault();
+  const n=document.getElementById('f-name').value.trim();
+  const p=document.getElementById('f-phone').value.trim();
+  const s=document.getElementById('f-serv').value;
+  const m=document.getElementById('f-msg').value.trim();
+  const t = LANG==='es'
+    ? `Hola ODY VISAS. Soy ${n}.\nServicio de interés: ${s}.`+(m?`\nMi caso: ${m}`:'')+(p?`\nMi teléfono: ${p}`:'')
+    : `Hello ODY VISAS. I am ${n}.\nService of interest: ${s}.`+(m?`\nMy case: ${m}`:'')+(p?`\nMy phone: ${p}`:'');
+  window.open('https://wa.me/18094882222?text='+encodeURIComponent(t),'_blank');
 });
+document.getElementById('quickForm').addEventListener('submit',e=>{
+  e.preventDefault();
+  const q=document.getElementById('q-msg').value.trim();
+  const t = LANG==='es' ? `Hola ODY VISAS. ${q||'Quiero información sobre mi visa.'}`
+                        : `Hello ODY VISAS. ${q||'I would like information about my visa.'}`;
+  window.open('https://wa.me/18094882222?text='+encodeURIComponent(t),'_blank');
+});
+
+/* ================= init ================= */
+setLang(localStorage.getItem('ody-lang')||'es');
+heroFrame(); drawLines();
+window.addEventListener('load',()=>{heroFrame();drawLines();});
 </script>
 </body>
 </html>
